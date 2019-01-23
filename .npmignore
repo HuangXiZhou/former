@@ -1,0 +1,24 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# example
+/example
+
+# static
+/static
+
+# misc
+.DS_Store
+
+# source code
+src
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
