@@ -1,2 +1,2 @@
-import Formless from './components/Form.vue';
-export { Formless };
+import Former from './components/Form.vue';
+export { Former };

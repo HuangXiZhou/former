@@ -1,5 +1,5 @@
 {
-  "name": "@xizhouh/formless",
+  "name": "@xizhouh/former",
   "version": "0.0.1",
   "description": "Amazing form adapter, write less, do much.",
   "main": "lib/vue/index.js",
@@ -22,10 +22,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HuangXiZhou/formless.git"
+    "url": "git+https://github.com/HuangXiZhou/former.git"
   },
   "keywords": [
-    "formless",
+    "former",
     "json-schema",
     "adapter",
     "element-ui",
@@ -34,9 +34,9 @@
   "author": "xizhouh@gmail.com",
   "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/HuangXiZhou/formless/issues"
+    "url": "https://github.com/HuangXiZhou/former/issues"
   },
-  "homepage": "https://github.com/HuangXiZhou/formless#readme",
+  "homepage": "https://github.com/HuangXiZhou/former#readme",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",

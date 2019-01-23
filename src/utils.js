@@ -72,5 +72,5 @@ export function transformUIelName (libraryName) {
   if (libraryName === 'element-ui') {
     return 'el';
   }
-  return 'formless-custom-';
+  return 'former-custom-';
 }

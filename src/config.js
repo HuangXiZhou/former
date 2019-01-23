@@ -1,3 +1,3 @@
 export default {
-  namespace: 'formless'
+  namespace: 'former'
 };

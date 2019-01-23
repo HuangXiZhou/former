@@ -26,7 +26,7 @@ export default [
     output: {
       file: resolve('./lib/vue/index.js'),
       format: 'umd',
-      name: 'Formless'
+      name: 'Former'
     },
     plugins: [].concat(defaultPlugins)
   }

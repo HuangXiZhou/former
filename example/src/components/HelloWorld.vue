@@ -1,14 +1,14 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <Formless ui="element-ui" :model="model" :schema="schema" :options="options"></Formless>
+    <Former ui="element-ui" :model="model" :schema="schema" :options="options"></Former>
   </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import { Form, FormItem, Input } from 'element-ui';
-import { Formless } from '@xizhouh/formless/lib/vue';
+import { Former } from '@xizhouh/former/lib/vue';
 import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.component('el-input', Input);
@@ -20,7 +20,7 @@ export default {
     msg: String,
   },
   components: {
-    Formless
+    Former
   },
   data: () => ({
     model: {
