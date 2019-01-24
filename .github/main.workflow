@@ -17,7 +17,7 @@ action "Test" {
 action "Tag" {
   needs = "Test"
   uses = "actions/bin/filter@master"
-  args = "tag v*"
+  args = "tag"
 }
 
 action "Build" {
