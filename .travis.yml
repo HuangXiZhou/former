@@ -1,0 +1,18 @@
+sudo: false
+
+language: node_js
+
+notifications:
+  email: false
+
+node_js:
+  - '10.15.0'
+
+install:
+  - npm install
+
+script:
+  - npm run ci
+
+after_script:
+  - npm run codecov
