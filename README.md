@@ -10,7 +10,6 @@
 [![version][version-badge]][package]
 [![downloads][downloads-badge]][package]
 [![PRs Welcome][prs-badge]][prs]
-[![WTFPL License][license-badge]][license]
 
 ## Install
 
@@ -38,7 +37,5 @@ WTFPL
 [version-badge]: https://img.shields.io/npm/v/@xizhouh/former.svg?style=flat-square
 [package]: https://www.npmjs.com/package/@xizhouh/former
 [downloads-badge]: https://img.shields.io/npm/dm/@xizhouh/former.svg?style=flat-square
-[license-badge]: https://img.shields.io/npm/l/@xizhouh/former.svg?style=flat-square
-[license]: https://github.com/HuangXiZhou/former/blob/master/LICENSE
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: https://github.com/HuangXiZhou/former/pulls
