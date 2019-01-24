@@ -1,6 +1,6 @@
 {
   "name": "@xizhouh/former",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Amazing form adapter, write less, do much.",
   "main": "lib/vue/index.js",
   "files": [
