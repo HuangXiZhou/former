@@ -14,14 +14,14 @@ action "Test" {
   args = "test"
 }
 
-action "Master" {
+action "Tag" {
   needs = "Test"
   uses = "actions/bin/filter@master"
-  args = "branch master"
+  args = "tag v*"
 }
 
 action "Build" {
-  needs = "Master"
+  needs = "Tag"
   uses = "actions/npm@master"
   args = "build"
 }
@@ -31,6 +31,6 @@ action "Publish" {
   uses = "actions/npm@master"
   args = "publish --access public"
   secrets = [
-    "NPM_AUTH_TOKEN",
+    "NPM_AUTH_TOKEN"
   ]
 }
