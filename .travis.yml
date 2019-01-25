@@ -11,14 +11,14 @@ node_js:
 install:
   - npm install
 
-script:
-  - npm run ci
-  - npm run
-
-after_script:
-  - npm run codecov
-
-after_success:
-  on:
-    branch: master
-  - ./deploy.sh
+jobs:
+  include:
+    - stage: Test
+      name: Unit Test
+      script: npm run test
+    - name: Code Coverage
+      script: npm run codecov
+    - stage: Deploy
+      name: Deploy Docs
+      script: npm run docs:build
+      if: branch = master
