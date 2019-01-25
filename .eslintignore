@@ -12,14 +12,11 @@
 # misc
 .DS_Store
 
-# source code
-src
-
 # docs
-docs
+.vuepress
 
-# github
-.github
+# lib
+lib
 
 npm-debug.log*
 yarn-debug.log*

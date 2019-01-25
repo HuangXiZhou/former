@@ -1,4 +1,4 @@
-import vuePlugin from 'rollup-plugin-vue'
+import vuePlugin from 'rollup-plugin-vue';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import filesize from 'rollup-plugin-filesize';
@@ -17,7 +17,7 @@ const defaultPlugins = [
   commonjs({ sourceMap: false }),
   terser(),
   filesize()
-]
+];
 
 export default [
   // vue component library
@@ -30,4 +30,4 @@ export default [
     },
     plugins: [].concat(defaultPlugins)
   }
-]
+];

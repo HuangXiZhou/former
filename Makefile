@@ -22,6 +22,14 @@ build:
 	@npm run clean
 	@npm run build
 
+.PHONY: docs-dev
+docs-dev:
+	@npm run docs:dev
+
+.PHONY: docs-build
+docs-build:
+	@npm run docs:build
+
 help:
 	@echo "   \033[35mmake\033[0m \033[1mCommand instructions\033[0m"
 	@echo "   \033[35mmake install\033[0m\t\033[0m\t---  Installation dependence"
@@ -29,3 +37,5 @@ help:
 	@echo "   \033[35mmake lint\033[0m\t\033[0m\t---  Code lint"
 	@echo "   \033[35mmake test\033[0m\t\033[0m\t---  Code test"
 	@echo "   \033[35mmake build\033[0m\t\033[0m\t---  Build code"
+	@echo "   \033[35mmake docs-dev\033[0m\033[0m\t---  Write docs"
+	@echo "   \033[35mmake docs-build\033[0m\033[0m\t---  Build docs"

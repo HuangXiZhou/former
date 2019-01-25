@@ -1,0 +1,20 @@
+@import './palette.styl';
+
+.vuepress-plugin-demo-block__wrapper .vuepress-plugin-demo-block__footer:hover .vuepress-plugin-demo-block__expand::before
+  border-top-color: $accentColor !important;
+  border-bottom-color: $accentColor !important;
+
+.vuepress-plugin-demo-block__wrapper .vuepress-plugin-demo-block__footer .vuepress-plugin-demo-block__expand::before,
+.vuepress-plugin-demo-block__wrapper .vuepress-plugin-demo-block__footer svg
+  transition all .2s ease
+
+.vuepress-plugin-demo-block__wrapper .vuepress-plugin-demo-block__footer:hover svg
+  fill: $accentColor !important;
+
+@media (max-width: 414px)
+  .vuepress-plugin-demo-block__code div[class*="language-"]::before
+    top: -0.4em !important;
+    right: 2.75em !important;
+
+  .vuepress-plugin-demo-block__code .content pre, .content pre[class*="language-"]
+    padding: 0.8rem 2.4rem 1.7rem 2.4rem !important;
