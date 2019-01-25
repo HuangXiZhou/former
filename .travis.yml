@@ -19,4 +19,6 @@ after_script:
   - npm run codecov
 
 after_success:
+  on:
+    branch: master
   - ./deploy.sh
