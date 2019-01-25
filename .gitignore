@@ -15,6 +15,9 @@ yarn.lock
 # lib
 lib
 
+# docs
+dist
+
 # Editor directories and files
 .idea
 .vscode

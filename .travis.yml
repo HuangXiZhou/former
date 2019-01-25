@@ -13,6 +13,10 @@ install:
 
 script:
   - npm run ci
+  - npm run
 
 after_script:
   - npm run codecov
+
+after_success:
+  - ./deploy.sh
