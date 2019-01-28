@@ -15,6 +15,9 @@ yarn.lock
 # lib
 lib
 
+# example
+example
+
 # docs
 dist
 

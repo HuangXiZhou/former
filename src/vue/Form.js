@@ -1,15 +1,15 @@
-<script>
-import config from '../../config.js';
-import FormItem from './FormItem.vue';
-import { transformUIelName } from '../../utils.js';
+import config from '../config.js';
+import FormItem from './FormItem.js';
+import { transformUIelName } from '../utils.js';
 import mitt from 'mitt';
+
 export default {
   name: config.namespace,
 
   provide () {
     return {
       statusEmitter: this.statusEmitter,
-      formModel: this.$props.model
+      model: this.$props.model
     };
   },
 
@@ -81,8 +81,7 @@ export default {
     return h(
       `${prefix}-form`,
       { ref: config.namespace, props: { ...options, model } },
-      schema.map((item, idx) => h(FormItem, { key: idx, props: { attrs: item, ui } }))
+      schema.map((item, idx) => h(FormItem, { key: idx, props: { fields: item, ui } }))
     );
   }
 };
-</script>
