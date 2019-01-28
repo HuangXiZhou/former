@@ -1,2 +1,2 @@
-import Former from './components/Form.vue';
-export { Former };
+import Former from './Form.js';
+export default Former;

@@ -8,10 +8,9 @@ import { cloneDeep } from '../../../utils.js';
  * @param {Object} attrs form control's attributes
  * @param {String} type control's type
  */
-export function createFormControl (h, attrs, type) {
-  const { props, status } = attrs;
-  attrs.class = ['control'];
-  attrs.props = omit(attrs.props, ['type']);
+export function createFormControl (h, attrs) {
+  const { props, status, type } = attrs;
+  attrs.class = ['control'].concat(attrs.class);
 
   // Input
   if (type === 'input') {

@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+}
+
+.main {
+  width: 100%;
+}
+
+.top {
+  padding-bottom: 5px;
+}
+
+.bottom {
+  padding-top: 5px;
+}
+
+.top,
+.bottom {
+  color: #909399;
+  line-height: normal;
+}
+
+.control {
+  width: 100%;
+}
+
+.suffix {
+  margin-left: 10px;
+}
+
+.prefix {
+  margin-right: 10px;
+}
