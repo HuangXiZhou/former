@@ -20,5 +20,5 @@ jobs:
       script: npm run codecov
     - stage: Deploy
       name: Deploy Docs
-      script: npm run docs:build
+      script: ./deploy.sh
       if: branch = master
