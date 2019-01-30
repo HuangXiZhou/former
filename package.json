@@ -14,7 +14,7 @@
     "prepublishOnly": "npm run build",
     "test": "jest . --cache",
     "cov": "jest . --cache --coverage --silent",
-    "codecov": "cat ./coverage/lcov.info | codecov",
+    "codecov": "npm run cov && cat ./coverage/lcov.info | codecov",
     "ci": "npm run test",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
