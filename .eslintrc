@@ -1,13 +1,27 @@
 {
-  "extends": [
-    "plugin:vue/recommended"
-  ],
+  "extends": [ "plugin:vue/recommended" ],
   "plugins": [ "jest" ],
   "rules": {
     "semi": [ "error", "always" ],
-    "arrow-parens": [ "error", "always" ]
+    "arrow-parens": [ "error", "always" ],
+    "array-bracket-spacing": [ "error", "always" ],
+    "no-console": 2,
+    "no-debugger": 2,
+    "no-var": 0,
+    "indent": [ 2, 2 ],
+    "prefer-const": 0,
+    "prefer-spread": 0,
+    "object-curly-spacing": [ "error", "always" ],
+    "arrow-spacing": 2,
+    "object-curly-newline": [ "error", {
+      "ObjectExpression": { "multiline": true, "minProperties": 3 },
+      "ObjectPattern": "never",
+      "ImportDeclaration": "never",
+      "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+    } ]
   },
   "env": {
-    "jest/globals": true
+    "jest/globals": true,
+    "browser": true
   }
 }

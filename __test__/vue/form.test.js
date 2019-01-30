@@ -17,18 +17,17 @@ describe('Former/form', () => {
       data: () => ({
         options: {},
         schema,
-        model
+        model,
+        ui: 'element-ui'
       }),
 
-      components: {
-        Former
-      },
+      components: { Former },
 
       render(h) {
         return h('Former', {
           ref: formerConfig.namespace,
           props: {
-            ui: 'element-ui',
+            ui: this.ui,
             model: this.model,
             options: this.options,
             schema: this.schema
@@ -119,5 +118,15 @@ describe('Former/form', () => {
     expect(inputArr).toHaveLength(1);
     expect(textareaArr).toHaveLength(1);
     expect(noneArr).toHaveLength(0);
+  });
+
+  test('Custom class mount', () => {
+    const arr = formerInstance.findAll('.wrapper .custom-class').wrappers;
+    expect(arr).toHaveLength(1);
+  });
+
+  test('Custom style mount', () => {
+    const htmlArr = formerInstance.findAll('.wrapper .custom-class').wrappers.map((v) => v.html());
+    htmlArr.forEach((v) => expect(v).toContain('style="width: 350px;"'));
   });
 });

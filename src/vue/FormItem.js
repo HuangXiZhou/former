@@ -9,16 +9,14 @@ import './style.css';
 export default {
   name: `${config.namespace}-item`,
 
-  inject: ['statusEmitter', 'model'],
+  inject: [ 'statusEmitter', 'model' ],
 
   props: {
     ui: { type: String, default: () => 'element-ui' },
     fields: { type: Object, default: () => {} } // schema item fields
   },
 
-  data: () => ({
-    status: 'EDIT'
-  }),
+  data: () => ({ status: 'EDIT' }),
 
   mounted () {
     const { fields } = this.$props;
@@ -102,19 +100,19 @@ export default {
 
     return h(`${transformUIelName(ui)}-form-item`, { props: attrs.props }, [
       // Main slot
-      h('div', { class: ['wrapper'] }, [
+      h('div', { class: [ 'wrapper' ] }, [
         // Prefix slot
-        surrounds.prefix && h('div', { class: ['prefix'] }, [ isFunction(surrounds.prefix) ? surrounds.prefix(h) : surrounds.prefix ]),
-        h('div', { class: ['main'] }, [
+        surrounds.prefix && h('div', { class: [ 'prefix' ] }, [ isFunction(surrounds.prefix) ? surrounds.prefix(h) : surrounds.prefix ]),
+        h('div', { class: [ 'main' ] }, [
           // Top slot
-          surrounds.top && h('div', { class: ['top'] }, [ isFunction(surrounds.top) ? surrounds.top(h) : surrounds.top ]),
+          surrounds.top && h('div', { class: [ 'top' ] }, [ isFunction(surrounds.top) ? surrounds.top(h) : surrounds.top ]),
           //  Main control
           createFormControl[ui](h, attrs),
           // Bottom slot
-          surrounds.bottom && h('div', { class: ['bottom'] }, [ isFunction(surrounds.bottom) ? surrounds.bottom(h) : surrounds.bottom ])
+          surrounds.bottom && h('div', { class: [ 'bottom' ] }, [ isFunction(surrounds.bottom) ? surrounds.bottom(h) : surrounds.bottom ])
         ]),
         // Suffix slot
-        surrounds.suffix && h('div', { class: ['suffix'] }, [ isFunction(surrounds.suffix) ? surrounds.suffix(h) : surrounds.suffix ])
+        surrounds.suffix && h('div', { class: [ 'suffix' ] }, [ isFunction(surrounds.suffix) ? surrounds.suffix(h) : surrounds.suffix ])
       ])
     ]);
   }
