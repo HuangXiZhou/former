@@ -10,10 +10,10 @@ import { cloneDeep } from '../../../utils.js';
  */
 export function createFormControl (h, attrs) {
   const { props, status, type, htmlAttr } = attrs;
-  attrs.class = ['control'].concat(attrs.class);
+  attrs.class = [ 'control' ].concat(attrs.class);
   attrs.attrs = htmlAttr;
   // Remove type & htmlAttr field
-  attrs = omit(attrs, ['type', 'htmlAttr']);
+  attrs = omit(attrs, [ 'type', 'htmlAttr' ]);
 
   // Input
   if (type === 'input') {
@@ -46,7 +46,7 @@ export function createFormControl (h, attrs) {
         props: {
           value: option.id || option.value,
           label: option.name || option.label || '',
-          ...omit(option, ['id', 'value', 'name', 'label', 'on'])
+          ...omit(option, [ 'id', 'value', 'name', 'label', 'on' ])
         }
       };
       return h('el-option', { ..._attrs }, option.name || option.label || '');
@@ -71,7 +71,7 @@ export function createFormControl (h, attrs) {
         on: { ...(option.on || {}) },
         props: {
           label: option.id || option.value,
-          ...omit(option, ['id', 'value', 'name', 'label'])
+          ...omit(option, [ 'id', 'value', 'name', 'label' ])
         }
       };
       return h('el-radio', { ..._attrs }, option.name || option.label || '');
@@ -89,7 +89,7 @@ export function createFormControl (h, attrs) {
         props: {
           value: option.id || option.value,
           label: option.name || option.label || '',
-          ...omit(option, ['id', 'value', 'name', 'label'])
+          ...omit(option, [ 'id', 'value', 'name', 'label' ])
         }
       };
       return h('el-checkbox', { ..._attrs }, option.name || option.label || '');

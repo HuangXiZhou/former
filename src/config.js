@@ -1,3 +1,1 @@
-export default {
-  namespace: 'former'
-};
+export default { namespace: 'former' };

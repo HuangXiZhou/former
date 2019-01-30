@@ -20,9 +20,7 @@ describe('Former/form', () => {
         model
       }),
 
-      components: {
-        Former
-      },
+      components: { Former },
 
       render(h) {
         return h('Former', {
@@ -38,7 +36,7 @@ describe('Former/form', () => {
     }, { localVue });
   });
 
-  test('test', () => {
+  test('Render `Input` component', () => {
 
   });
 });

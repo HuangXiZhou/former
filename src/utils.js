@@ -20,7 +20,7 @@ export function cloneDeep (o, c) {
   for (var i in o) {
     if (typeof o[i] === 'object') {
       if (o[i].constructor === Array) {
-      c[i] =[];
+        c[i] =[];
       } else {
         c[i] = {};
       }
@@ -56,7 +56,6 @@ export function parsePath (obj, path) {
  * @param {Any} input
  */
 export function checkWhen (input) {
-  console.log(input, 2323);
   if (typeof input === 'boolean') return input;
 
   if (typeof input === 'function') {
