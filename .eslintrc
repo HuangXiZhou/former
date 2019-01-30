@@ -2,7 +2,12 @@
   "extends": [
     "plugin:vue/recommended"
   ],
+  "plugins": [ "jest" ],
   "rules": {
-    "semi": ["error", "always"]
+    "semi": [ "error", "always" ],
+    "arrow-parens": [ "error", "always" ]
+  },
+  "env": {
+    "jest/globals": true
   }
 }

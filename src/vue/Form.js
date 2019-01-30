@@ -32,7 +32,7 @@ export default {
   created () {
     // Init store
     const emitter = this.statusEmitter.core = mitt();
-    emitter.on('init', statusObj => {
+    emitter.on('init', (statusObj) => {
       this.statusCenter = { ...this.statusCenter, ...statusObj };
     });
   },
@@ -40,35 +40,35 @@ export default {
   mounted () {
     // onLoad form validate functions
     if (this.$refs[config.namespace]) {
-      this.handleValidate = this.$refs[config.namespace].validate;
-      this.handleValidateField = this.$refs[config.namespace].validateField;
-      this.handleResetFields = this.$refs[config.namespace].resetFields;
-      this.handleClearValidate = this.$refs[config.namespace].clearValidate;
+      this.validate = this.$refs[config.namespace].validate;
+      this.validateField = this.$refs[config.namespace].validateField;
+      this.resetFields = this.$refs[config.namespace].resetFields;
+      this.clearValidate = this.$refs[config.namespace].clearValidate;
     }
   },
 
   methods: {
     // Set form control status
-    handleSetStatus (key, status) {
+    setStatus (key, status) {
       this.statusEmitter.core.emit('update', { name: key, status });
       this.statusCenter[key] && (this.statusCenter[key] = status);
     },
     // Get form control status
-    handleGetStatus (key) {
+    getStatus (key) {
       return this.statusCenter[key];
     },
     // Set global form status
-    handleSetGlobalStatus (status) {
+    setGlobalStatus (status) {
       let statusCenter = this.statusCenter;
       status = status || 'EDIT';
-      Object.keys(statusCenter).forEach(key => {
+      Object.keys(statusCenter).forEach((key) => {
         statusCenter[key] = status;
         this.statusEmitter.core.emit('update', { name: key, status });
       });
       this.statusCenter = { ...statusCenter };
     },
     // Get global form status
-    handleGetGlobalStatus () {
+    getGlobalStatus () {
       return this.statusCenter;
     }
   },

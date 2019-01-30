@@ -9,8 +9,11 @@ import { cloneDeep } from '../../../utils.js';
  * @param {String} type control's type
  */
 export function createFormControl (h, attrs) {
-  const { props, status, type } = attrs;
+  const { props, status, type, htmlAttr } = attrs;
   attrs.class = ['control'].concat(attrs.class);
+  attrs.attrs = htmlAttr;
+  // Remove type & htmlAttr field
+  attrs = omit(attrs, ['type', 'htmlAttr']);
 
   // Input
   if (type === 'input') {
@@ -33,11 +36,11 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       const props = cloneDeep(attrs.props);
       const value = props.options
-        .filter(option => option.value === props.value)
+        .filter((option) => option.value === props.value)
         .pop();
       return formatPreviewValue(h, value.label);
     }
-    return h('el-select', { ...attrs }, props.options && props.options.map(option => {
+    return h('el-select', { ...attrs }, props.options && props.options.map((option) => {
       const _attrs = {
         on: { ...(option.on || {}) },
         props: {
@@ -63,7 +66,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       return h('p', props.value);
     }
-    return h('el-radio-group', { ...attrs }, props.options && props.options.map(option => {
+    return h('el-radio-group', { ...attrs }, props.options && props.options.map((option) => {
       const _attrs = {
         on: { ...(option.on || {}) },
         props: {
@@ -80,7 +83,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       return h('p', props.value);
     }
-    return h('el-checkbox-group', { ...attrs }, props.options && props.options.map(option => {
+    return h('el-checkbox-group', { ...attrs }, props.options && props.options.map((option) => {
       const _attrs = {
         on: { ...(option.on || {}) },
         props: {
@@ -164,7 +167,7 @@ export function createFormControl (h, attrs) {
       attrs.props.disabled = true;
     }
     return h('el-upload', { ...attrs }, props.slots && Object.keys(props.slots).map(
-      slot => h('div', [ props.slots[slot](h) ])
+      (slot) => h('div', [ props.slots[slot](h) ])
     ));
   }
 
@@ -192,7 +195,7 @@ function formatPreviewValue (h, value) {
 function deepSearchCascader (...args) {
   args[2] = args[2] || 0;
   args[3] = args[3] || [];
-  args[1].forEach(option => {
+  args[1].forEach((option) => {
     if (option.value === args[0][args[2]]) {
       if (option.children) {
         deepSearchCascader(args[0], option.children, args[2] + 1, args[3]);
