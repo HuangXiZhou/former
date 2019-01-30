@@ -4,7 +4,7 @@ export default {
   select: 'bar',
   inputNumber: '',
   radio: 'foo',
-  checkbox: false,
+  checkbox: 'foo',
   switch: false,
   slider: 0,
   datePicker: '',

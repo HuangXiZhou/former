@@ -62,7 +62,7 @@ export default {
       // Native html element attributes
       htmlAttr: fields.htmlAttr || {},
       // Form status
-      status: this.status || 'EDIT',
+      status: this.$data.status || 'EDIT',
       // Form control type
       type: fields.type || 'input',
       // Form control linkage
