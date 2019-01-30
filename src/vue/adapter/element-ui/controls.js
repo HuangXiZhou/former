@@ -155,6 +155,7 @@ export function createFormControl (h, attrs) {
   // Cascader
   if (type === 'cascader') {
     if (status === 'PREVIEW') {
+      attrs.props.disabled = true;
       const value = deepSearchCascader(attrs.props.value, attrs.props.options).reverse().join('/');
       return formatPreviewValue(h, value);
     }

@@ -1,9 +1,9 @@
 import { createLocalVue, mount, config } from '@vue/test-utils';
 import ElementUI from 'element-ui';
-import Former from '../../src/vue/index';
-import formerConfig from '../../src/config';
-import schema from '../__mocks__/schema';
-import model from '../__mocks__/model';
+import Former from '../src/vue/index';
+import formerConfig from '../src/config';
+import schema from './__mocks__/schema';
+import model from './__mocks__/model';
 
 config.stubs.transition = false;
 const localVue = createLocalVue();
@@ -34,27 +34,35 @@ describe('Former/form', () => {
           }
         });
       }
-    }, { localVue });
+    }, { localVue, sync: false });
   });
 
   test('Init former', () => {
     expect(formerInstance.vm).toBeInstanceOf(Object);
   });
 
+  test('Set default global form status', () => {
+    const formerRef = formerInstance.vm.$refs.former;
+    formerRef.setGlobalStatus();
+    localVue.nextTick(() => {
+      Object.values(formerRef.statusCenter).forEach((item) => expect(item).toBe('EDIT'));
+    });
+  });
+
   test('Set global form status', () => {
     const formerRef = formerInstance.vm.$refs.former;
     formerRef.setGlobalStatus('PREVIEW');
-    Object.values(formerRef.statusCenter).forEach((item) => expect(item).toBe('PREVIEW'));
-    formerRef.setGlobalStatus();
-    Object.values(formerRef.statusCenter).forEach((item) => expect(item).toBe('EDIT'));
+    localVue.nextTick(() => {
+      Object.values(formerRef.statusCenter).forEach((item) => expect(item).toBe('PREVIEW'));
+    });
   });
 
   test('Get global form status', () => {
     const formerRef = formerInstance.vm.$refs.former;
-    formerRef.setGlobalStatus('EDIT');
-    Object.values(formerRef.getGlobalStatus()).forEach((item) => expect(item).toBe('EDIT'));
     formerRef.setGlobalStatus('DISABLED');
-    Object.values(formerRef.getGlobalStatus()).forEach((item) => expect(item).toBe('DISABLED'));
+    localVue.nextTick(() => {
+      Object.values(formerRef.getGlobalStatus()).forEach((item) => expect(item).toBe('DISABLED'));
+    });
   });
 
   test('Set single form control status', () => {
@@ -128,5 +136,10 @@ describe('Former/form', () => {
   test('Custom style mount', () => {
     const htmlArr = formerInstance.findAll('.wrapper .custom-class').wrappers.map((v) => v.html());
     htmlArr.forEach((v) => expect(v).toContain('style="width: 350px;"'));
+  });
+
+  test('Form model reactive', () => {
+    formerInstance.find('.wrapper input[aria-label="input"]').setValue('foo');
+    expect(formerInstance.vm.model.input).toBe('foo');
   });
 });

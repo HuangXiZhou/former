@@ -1,0 +1,320 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Former/form Render \`Cascader\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="cascader" class="el-form-item__label">cascader</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main"><span class="el-cascader control"><div class="el-input el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon el-icon-arrow-down"></i><!----></span>
+          <!----></span>
+          <!---->
+        </div><span class="el-cascader__label"></span></span>
+      </div>
+    </div>
+    <!---->
+  </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Checkbox\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="checkbox" class="el-form-item__label">checkbox</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main">
+          <div role="group" aria-label="checkbox-group" class="el-checkbox-group control"><label role="checkbox" class="el-checkbox"><span aria-checked="mixed" class="el-checkbox__input"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="foo"></span><span class="el-checkbox__label">foo<!----></span></label></div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Custom\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="custom" class="el-form-item__label">custom</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main">
+          <div class="control">
+            <div>foo</div>
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`DatePicker\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="datePicker" class="el-form-item__label">datePicker</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main">
+          <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--date control">
+            <!----><input type="text" autocomplete="off" name="datePicker" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-date"></i><!----></span><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon"></i><!----></span>
+            <!----></span>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Input\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item is-required"><label for="input" class="el-form-item__label">input</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="prefix">prefix</div>
+        <div class="main">
+          <div class="top">top</div>
+          <div class="el-input control">
+            <!----><input type="text" autocomplete="off" aria-label="input" placeholder="input placeholder" class="el-input__inner">
+            <!---->
+            <!---->
+            <!---->
+          </div>
+          <div class="bottom">bottom</div>
+        </div>
+        <div class="suffix">suffix</div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`InputNumber\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="inputNumber" class="el-form-item__label">inputNumber</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main">
+          <div class="el-input-number control"><span role="button" class="el-input-number__decrease"><i class="el-icon-minus"></i></span><span role="button" class="el-input-number__increase"><i class="el-icon-plus"></i></span>
+            <div class="el-input">
+              <!----><input type="text" autocomplete="off" aria-label="inputNumber" max="Infinity" min="-Infinity" name="inputNumber" class="el-input__inner" role="spinbutton" aria-valuemax="Infinity" aria-valuemin="-Infinity" aria-valuenow="0" aria-disabled="false">
+              <!---->
+              <!---->
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Radio\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="radio" class="el-form-item__label">radio</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main">
+          <div role="radiogroup" class="el-radio-group control"><label role="radio" aria-checked="true" tabindex="0" class="el-radio is-checked"><span class="el-radio__input is-checked"><span class="el-radio__inner"></span><input type="radio" aria-hidden="true" tabindex="-1" class="el-radio__original" value="foo"></span><span class="el-radio__label">foo<!----></span></label><label role="radio" tabindex="-1" class="el-radio"><span class="el-radio__input"><span class="el-radio__inner"></span><input type="radio" aria-hidden="true" tabindex="-1" class="el-radio__original" value="bar"></span><span class="el-radio__label">bar<!----></span></label></div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Rate\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="rate" class="el-form-item__label">rate</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main">
+          <div role="slider" aria-valuenow="0" aria-valuetext="" aria-valuemin="0" aria-valuemax="5" tabindex="0" class="el-rate control" style="line-height: 2.4;"><span class="el-rate__item" style="cursor: pointer;"><i class="el-rate__icon el-icon-star-off" style="color: rgb(198, 209, 222);"><!----></i></span><span class="el-rate__item" style="cursor: pointer;"><i class="el-rate__icon el-icon-star-off" style="color: rgb(198, 209, 222);"><!----></i></span><span class="el-rate__item" style="cursor: pointer;"><i class="el-rate__icon el-icon-star-off" style="color: rgb(198, 209, 222);"><!----></i></span><span class="el-rate__item" style="cursor: pointer;"><i class="el-rate__icon el-icon-star-off" style="color: rgb(198, 209, 222);"><!----></i></span><span class="el-rate__item" style="cursor: pointer;"><i class="el-rate__icon el-icon-star-off" style="color: rgb(198, 209, 222);"><!----></i></span>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Select\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="select" class="el-form-item__label">select</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main">
+          <div class="el-select control custom-class" style="width: 350px;">
+            <!---->
+            <div class="el-input el-input--suffix">
+              <!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" name="select" class="el-input__inner">
+              <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----></span>
+              <!----></span>
+              <!---->
+            </div>
+            <div class="el-select-dropdown el-popper" style="display: none;">
+              <div class="el-scrollbar" style="display: none;">
+                <div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                  <ul class="el-scrollbar__view el-select-dropdown__list">
+                    <!---->
+                    <li class="el-select-dropdown__item">foo</li>
+                    <li class="el-select-dropdown__item selected">bar</li>
+                  </ul>
+                </div>
+                <div class="el-scrollbar__bar is-horizontal">
+                  <div class="el-scrollbar__thumb" style="width: 0px; transform: translateX(0%); -webkit-transform: translateX(0%);"></div>
+                </div>
+                <div class="el-scrollbar__bar is-vertical">
+                  <div class="el-scrollbar__thumb" style="height: 0px; transform: translateY(0%); -webkit-transform: translateY(0%);"></div>
+                </div>
+              </div>
+              <p class="el-select-dropdown__empty">
+                无数据
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Switch\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="switch" class="el-form-item__label">switch</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main">
+          <div role="switch" class="el-switch control"><input type="checkbox" name="switch" true-value="true" class="el-switch__input">
+            <!----><span class="el-switch__core" style="width: 40px;"></span>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Textarea\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="textarea" class="el-form-item__label">textarea</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="prefix">
+          <div>prefix</div>
+        </div>
+        <div class="main">
+          <div class="top">
+            <div>top</div>
+          </div>
+          <div class="el-input control">
+            <!----><input type="text" autocomplete="off" aria-label="textarea" placeholder="textarea placeholder" class="el-input__inner">
+            <!---->
+            <!---->
+            <!---->
+          </div>
+          <div class="bottom">
+            <div>bottom</div>
+          </div>
+        </div>
+        <div class="suffix">
+          <div>suffix</div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`TimePicker\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="timePicker" class="el-form-item__label">timePicker</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main">
+          <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--time control">
+            <!----><input type="text" autocomplete="off" name="timePicker" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-time"></i><!----></span><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon"></i><!----></span>
+            <!----></span>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`TimeSelect\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="timeSelect" class="el-form-item__label">timeSelect</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main">
+          <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--time-select control">
+            <!----><input type="text" autocomplete="off" name="timeSelect" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-time"></i><!----></span><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon"></i><!----></span>
+            <!----></span>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Tree\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="tree" class="el-form-item__label">tree</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main">
+          <div role="tree" class="el-tree control">
+            <div role="treeitem" tabindex="0" draggable="false" class="el-tree-node is-focusable">
+              <div class="el-tree-node__content" style="padding-left: 0px;"><span class="el-tree-node__expand-icon el-icon-caret-right"></span>
+                <!---->
+                <!----><span class="el-tree-node__label">foo</span></div>
+              <!---->
+            </div>
+            <!---->
+            <div class="el-tree__drop-indicator" style="display: none;"></div>
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Upload\` component 1`] = `
+<form class="el-form">
+  <div class="el-form-item"><label for="upload" class="el-form-item__label">upload</label>
+    <div class="el-form-item__content">
+      <div class="wrapper">
+        <div class="main">
+          <div class="control">
+            <div tabindex="0" class="el-upload el-upload--text"><input type="file" name="upload" class="el-upload__input"></div>
+            <ul class="el-upload-list el-upload-list--text"></ul>
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
