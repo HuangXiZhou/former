@@ -7,7 +7,8 @@
 - [ ] Feature
 - [ ] Code style update
 - [ ] Refactor
-- [ ] Test
+- [ ] Code test
+- [ ] Docs changes
 - [ ] Build-related changes
 - [ ] Other, please describe:
 
