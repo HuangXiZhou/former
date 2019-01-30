@@ -17,6 +17,10 @@ lint:
 test:
 	@npm run test
 
+.PHONY: cov
+cov:
+	@npm run cov
+
 .PHONY: build
 build:
 	@npm run clean
@@ -36,6 +40,7 @@ help:
 	@echo "   \033[35mmake dev\033[0m\t\033[0m\t---  Development mod"
 	@echo "   \033[35mmake lint\033[0m\t\033[0m\t---  Code lint"
 	@echo "   \033[35mmake test\033[0m\t\033[0m\t---  Code test"
+	@echo "   \033[35mmake cov\033[0m\t\033[0m\t---  Code cov"
 	@echo "   \033[35mmake build\033[0m\t\033[0m\t---  Build code"
 	@echo "   \033[35mmake docs-dev\033[0m\033[0m\t---  Write docs"
 	@echo "   \033[35mmake docs-build\033[0m\033[0m\t---  Build docs"

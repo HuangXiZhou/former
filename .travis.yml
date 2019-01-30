@@ -17,6 +17,8 @@ jobs:
       name: Unit Test
       script: npm run test
     - name: Code Coverage
+      script: npm run cov
+    - name: Send Code Coverage
       script: npm run codecov
     - stage: Deploy
       name: Deploy Docs

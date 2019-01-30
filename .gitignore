@@ -18,6 +18,9 @@ lib
 # example
 example
 
+# coverage
+coverage
+
 # docs
 dist
 

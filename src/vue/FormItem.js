@@ -24,7 +24,7 @@ export default {
     const { fields } = this.$props;
     if (fields.name && this.statusEmitter) {
       this.statusEmitter.core.emit('init', { [fields.name]: 'EDIT' });
-      this.statusEmitter.core.on('update', obj => {
+      this.statusEmitter.core.on('update', (obj) => {
         if (!obj) return;
         if (obj.name === fields.name && this.status !== obj.status) {
           this.status = obj.status;
@@ -50,7 +50,7 @@ export default {
           'suffix',
           'bottom',
           'when',
-          'htmlAttrs'
+          'htmlAttr'
         ]),
         // Form validate
         prop: fields.name || ''
@@ -68,7 +68,7 @@ export default {
       // Form control type
       type: fields.type || 'input',
       // Form control linkage
-      when: fields.when || null
+      when: fields.hasOwnProperty('when') ? fields.when : true
     };
     const surrounds = {
       top: fields.top || null,
@@ -83,20 +83,20 @@ export default {
     }
 
     // Emit event
-    attrs.on.input = e => {
+    attrs.on.input = (e) => {
       this.$emit('input', e);
     };
 
     // Init UI component value
     attrs.props.value = parsePath(this.model, attrs.props.name);
 
-    this.$on('input', e => {
+    this.$on('input', (e) => {
       set(this.model, attrs.props.name, e);
     });
 
     // Linkage
     const isWhen = checkWhen(attrs.when);
-    if (attrs.when && !isWhen) {
+    if (attrs.hasOwnProperty('when') && !isWhen) {
       return null;
     };
 

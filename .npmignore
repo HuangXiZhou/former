@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 
-# testing
+# coverage
 /coverage
 
 # static
@@ -17,6 +17,9 @@ src
 
 # docs
 docs
+
+# example
+example
 
 # github
 .github

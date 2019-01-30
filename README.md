@@ -7,6 +7,7 @@
 <hr />
 
 [![Build Status][build-badge]][build]
+[![codecov][codecov-badge]][codecov]
 [![version][version-badge]][package]
 [![downloads][downloads-badge]][package]
 [![PRs Welcome][prs-badge]][prs]
@@ -23,7 +24,7 @@ $ npm install --save @xizhouh/formler
 ## Usage
 
 ```js
-import { Former } from '@xizhouh/former';
+import Former from '@xizhouh/former';
 ```
 
 ## License
@@ -34,6 +35,8 @@ WTFPL
 [node]: https://nodejs.org
 [build-badge]: https://img.shields.io/travis/HuangXiZhou/former.svg?style=flat-square
 [build]: https://travis-ci.org/HuangXiZhou/former
+[codecov-badge]: https://img.shields.io/codecov/c/gh/HuangXiZhou/former.svg?style=flat-square
+[codecov]: https://codecov.io/gh/HuangXiZhou/former
 [version-badge]: https://img.shields.io/npm/v/@xizhouh/former.svg?style=flat-square
 [package]: https://www.npmjs.com/package/@xizhouh/former
 [downloads-badge]: https://img.shields.io/npm/dm/@xizhouh/former.svg?style=flat-square
