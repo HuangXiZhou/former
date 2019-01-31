@@ -37,11 +37,11 @@ describe('Former/form', () => {
     }, { localVue, sync: false });
   });
 
-  test('Init former', () => {
+  it('Init former', () => {
     expect(formerInstance.vm).toBeInstanceOf(Object);
   });
 
-  test('Set default global form status', () => {
+  it('Set default global form status', () => {
     const formerRef = formerInstance.vm.$refs.former;
     formerRef.setGlobalStatus();
     localVue.nextTick(() => {
@@ -49,7 +49,7 @@ describe('Former/form', () => {
     });
   });
 
-  test('Set global form status', () => {
+  it('Set global form status', () => {
     const formerRef = formerInstance.vm.$refs.former;
     formerRef.setGlobalStatus('PREVIEW');
     localVue.nextTick(() => {
@@ -57,7 +57,7 @@ describe('Former/form', () => {
     });
   });
 
-  test('Get global form status', () => {
+  it('Get global form status', () => {
     const formerRef = formerInstance.vm.$refs.former;
     formerRef.setGlobalStatus('DISABLED');
     localVue.nextTick(() => {
@@ -65,39 +65,39 @@ describe('Former/form', () => {
     });
   });
 
-  test('Set single form control status', () => {
+  it('Set single form control status', () => {
     const formerRef = formerInstance.vm.$refs.former;
     formerRef.setStatus('input', 'EDIT');
     expect(formerRef.statusCenter.input).toBe('EDIT');
   });
 
-  test('Get single form control status', () => {
+  it('Get single form control status', () => {
     const formerRef = formerInstance.vm.$refs.former;
     formerRef.setStatus('input', 'EDIT');
     expect(formerRef.getStatus('input')).toBe('EDIT');
   });
 
-  test('Validate global form', () => {
+  it('Validate global form', () => {
     const formerRef = formerInstance.vm.$refs.former;
     return formerRef.validate((res) => expect(res).toBeFalsy());
   });
 
-  test('Validate single field', () => {
+  it('Validate single field', () => {
     const formerRef = formerInstance.vm.$refs.former;
     return formerRef.validateField('input', (res) => expect(res).toBe('input is required'));
   });
 
-  test('Reset form fields', () => {
+  it('Reset form fields', () => {
     const formerRef = formerInstance.vm.$refs.former;
     expect(formerRef.resetFields).toBeDefined();
   });
 
-  test('Clear form validate', () => {
+  it('Clear form validate', () => {
     const formerRef = formerInstance.vm.$refs.former;
     expect(formerRef.clearValidate).toBeDefined();
   });
 
-  test('Render surrounds', () => {
+  it('Render surrounds', () => {
     const top = formerInstance.findAll('.wrapper .top').wrappers.map((v) => v.text())[0];
     const prefix = formerInstance.findAll('.wrapper .prefix').wrappers.map((v) => v.text())[0];
     const suffix = formerInstance.findAll('.wrapper .suffix').wrappers.map((v) => v.text())[0];
@@ -108,7 +108,7 @@ describe('Former/form', () => {
     expect(bottom).toBe('bottom');
   });
 
-  test('Render surrounds by functions', () => {
+  it('Render surrounds by functions', () => {
     const top = formerInstance.findAll('.wrapper .top div').wrappers.map((v) => v.text())[0];
     const prefix = formerInstance.findAll('.wrapper .prefix div').wrappers.map((v) => v.text())[0];
     const suffix = formerInstance.findAll('.wrapper .suffix div').wrappers.map((v) => v.text())[0];
@@ -119,7 +119,7 @@ describe('Former/form', () => {
     expect(bottom).toBe('bottom');
   });
 
-  test('When render', () => {
+  it('When render', () => {
     const inputArr = formerInstance.findAll('.wrapper input[aria-label="input"]').wrappers.map((v) => v.text());
     const textareaArr = formerInstance.findAll('.wrapper input[aria-label="textarea"]').wrappers.map((v) => v.text());
     const noneArr = formerInstance.findAll('.wrapper input[aria-label="none"]').wrappers.map((v) => v.text());
@@ -128,17 +128,17 @@ describe('Former/form', () => {
     expect(noneArr).toHaveLength(0);
   });
 
-  test('Custom class mount', () => {
+  it('Custom class mount', () => {
     const arr = formerInstance.findAll('.wrapper .custom-class').wrappers;
     expect(arr).toHaveLength(1);
   });
 
-  test('Custom style mount', () => {
+  it('Custom style mount', () => {
     const htmlArr = formerInstance.findAll('.wrapper .custom-class').wrappers.map((v) => v.html());
     htmlArr.forEach((v) => expect(v).toContain('style="width: 350px;"'));
   });
 
-  test('Form model reactive', () => {
+  it('Form model reactive', () => {
     formerInstance.find('.wrapper input[aria-label="input"]').setValue('foo');
     expect(formerInstance.vm.model.input).toBe('foo');
   });
