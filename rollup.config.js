@@ -4,6 +4,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import filesize from 'rollup-plugin-filesize';
 import { terser } from "rollup-plugin-terser";
 import babel from 'rollup-plugin-babel';
+import postcss from 'rollup-plugin-postcss';
 import path from 'path';
 
 // resolve path
@@ -16,7 +17,8 @@ const defaultPlugins = [
   nodeResolve({ jsnext: true, main: true }),
   commonjs({ sourceMap: false }),
   terser(),
-  filesize()
+  filesize(),
+  postcss({ plugins: [] })
 ];
 
 export default [
