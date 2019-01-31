@@ -12,7 +12,7 @@
     "build": "rollup -c rollup.config.js",
     "clean": "rimraf lib/",
     "prepublishOnly": "npm run build",
-    "test": "jest . --cache",
+    "test": "jest . --cache --silent",
     "cov": "jest . --cache --coverage --silent",
     "codecov": "npm run cov && cat ./coverage/lcov.info | codecov",
     "ci": "npm run test",
