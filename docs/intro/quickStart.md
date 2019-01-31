@@ -18,36 +18,6 @@ Vue.use(ElementUI);
 Vue.component(Former);
 ```
 
-In `example.vue` :
-
-```vue
-<template>
-  <Former
-    ui="element-ui"
-    :options="options"
-    :model="model"
-    :schema="schema">
-  </Former>
-</template>
-```
-
-```js
-export default {
-  data: () => ({
-    model: { name: '', sex: '' },
-    schema: [
-      { label: 'name:', name: 'name', type: 'input', style: { width: '100%' },
-        rules: [
-          { required: true, message: 'name is required', trigger: 'blur' }
-        ]
-      },
-      { label: 'sex:', name: 'sex', type: 'input', style: { width: '100%' } }
-    ],
-    options: { labelWidth: '80px', labelPosition: 'left' }
-  })
-}
-```
-
 ::: demo
 ```html
 <template>
@@ -60,7 +30,7 @@ export default {
 <script>
 export default {
   components: {
-    Former: window.Former.Former
+    Former: window.Former
   },
 
   data: () => ({
