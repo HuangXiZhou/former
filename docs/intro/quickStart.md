@@ -2,20 +2,21 @@
 The following demo codes are available for running in [JSFiddle][JSFiddle] and [Codepen][Codepen].
 :::
 
-## Vue
+So far, the UI libraries we support are as follows:
 
-### Element UI
+- [Element UI][ElementUI]
 
-In `main.js` :
+## Element UI
 
 ```js
+// main.js
 import Vue from 'vue';
 import ElementUI from 'element-ui';
-import Former from '@xizhouh/former/lib/vue';
+import Former from '@xizhouh/former';
 import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(ElementUI);
-Vue.component(Former);
+Vue.component('Former', Former);
 ```
 
 ::: demo
@@ -55,7 +56,7 @@ export default {
   ],
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
-    "https://cdn.jsdelivr.net/npm/@xizhouh/former/lib/vue/index.js"
+    "https://cdn.jsdelivr.net/npm/@xizhouh/former/lib/former.umd.js"
   ]
 }
 ```
@@ -63,3 +64,4 @@ export default {
 
 [JSFiddle]: https://jsfiddle.net
 [Codepen]: https://codepen.io
+[ElementUI]: https://github.com/ElemeFE/element

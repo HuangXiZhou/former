@@ -2,7 +2,7 @@
   "name": "@xizhouh/former",
   "version": "1.0.1",
   "description": "Amazing form adapter, write less, do much.",
-  "main": "lib/vue/index.js",
+  "main": "lib/former.umd.js",
   "files": [
     "lib"
   ],

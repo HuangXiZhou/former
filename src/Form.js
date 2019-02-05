@@ -1,6 +1,6 @@
-import config from '../config.js';
+import config from './config.js';
 import FormItem from './FormItem.js';
-import { transformUIelName } from '../utils.js';
+import { transformUIelName } from './utils.js';
 import mitt from 'mitt';
 
 export default {
