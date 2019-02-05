@@ -1,6 +1,6 @@
 import { createLocalVue, mount, config } from '@vue/test-utils';
 import ElementUI from 'element-ui';
-import Former from '../src/vue/index';
+import Former from '../src/index';
 import formerConfig from '../src/config';
 import schema from './__mocks__/schema';
 import model from './__mocks__/model';
