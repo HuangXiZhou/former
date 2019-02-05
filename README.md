@@ -24,8 +24,6 @@ $ npm install --save @xizhouh/formler
 
 ## Quick Start
 
-### Vue
-
 ```js
 import Vue from 'vue';
 import Former from '@xizhouh/former';
@@ -36,11 +34,7 @@ Vue.use(Element);
 Vue.component('Former', Former);
 ```
 
-For more information like adapting other UI librarys, please refer to Quick Start in our documentation.
-
-### React
-
-Coming soon...
+For more information like adapting other UI librarys, please refer to [Quick Start][DocumentQuickStart] in our documentation.
 
 ## Browser Support
 
@@ -62,3 +56,4 @@ WTFPL
 [downloads-badge]: https://img.shields.io/npm/dm/@xizhouh/former.svg?style=flat-square
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: https://github.com/HuangXiZhou/former/pulls
+[DocumentQuickStart]: https://huangxizhou.github.io/former/intro/quickStart.html

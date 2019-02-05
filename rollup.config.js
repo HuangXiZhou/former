@@ -24,9 +24,9 @@ const defaultPlugins = [
 export default [
   // vue component library
   {
-    input: resolve('./src/vue/index.js'),
+    input: resolve('./src/index.js'),
     output: {
-      file: resolve('./lib/vue/index.js'),
+      file: resolve('./lib/former.umd.js'),
       format: 'umd',
       name: 'Former'
     },

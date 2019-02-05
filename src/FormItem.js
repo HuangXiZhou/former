@@ -1,9 +1,9 @@
-import config from '../config.js';
+import config from './config.js';
 import set from 'set-object-path';
 import omit from 'object.omit';
 import isFunction from 'is-function';
 import createFormControl from './adapter/index.js';
-import { cloneDeep, parsePath, checkWhen, transformUIelName } from '../utils.js';
+import { cloneDeep, parsePath, checkWhen, transformUIelName } from './utils.js';
 import './style.css';
 
 export default {

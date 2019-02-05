@@ -7,6 +7,4 @@ export default ({
   options,
   router,
   siteData
-}) => {
-  Vue.use(ElementUI)
-}
+}) => Vue.use(ElementUI)

@@ -7,8 +7,6 @@ module.exports = {
   description: '👻 Amazing form adapter, write less, do much.',
   head: [
     [ 'link', { rel: 'icon', href: '/logo.png' } ],
-    [ 'script', { src: 'https://cdn.jsdelivr.net/npm/react@16.6.3/umd/react.production.min.js' } ],
-    [ 'script', { src: 'https://cdn.jsdelivr.net/npm/react-dom@16.6.3/umd/react-dom.production.min.js' } ],
     [ 'script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' } ],
     [ 'script', { src: 'https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js' } ],
     [ 'script', { src: 'https://cdn.jsdelivr.net/npm/@xizhouh/former/lib/vue/index.js' } ]
