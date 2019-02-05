@@ -22,11 +22,29 @@ should be installed as one of your project's `dependencies`:
 $ npm install --save @xizhouh/formler
 ```
 
-## Usage
+## Quick Start
+
+### Vue
 
 ```js
+import Vue from 'vue';
 import Former from '@xizhouh/former';
+import Element from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(Element);
+Vue.component('Former', Former);
 ```
+
+For more information like adapting other UI librarys, please refer to Quick Start in our documentation.
+
+### React
+
+Coming soon...
+
+## Browser Support
+
+Modern browsers and Internet Explorer 10+.
 
 ## License
 
