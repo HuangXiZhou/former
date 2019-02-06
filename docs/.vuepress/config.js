@@ -4,6 +4,7 @@ const resolve = (val) => path.resolve(__dirname, val);
 module.exports = {
   base: '/former/',
   title: 'Former',
+  lastUpdated: 'Last Updated',
   description: '👻 Amazing form adapter, write less, do much.',
   head: [
     [ 'link', { rel: 'icon', href: '/logo.png' } ],
@@ -12,6 +13,7 @@ module.exports = {
     [ 'script', { src: 'https://cdn.jsdelivr.net/npm/@xizhouh/former/lib/vue/index.js' } ]
   ],
   themeConfig: {
+    search: false,
     sidebarDepth: 0,
     nav: [
       { text: 'Github', link: 'https://github.com/HuangXiZhou/former' }
@@ -19,11 +21,26 @@ module.exports = {
     sidebar: [
       {
         title: 'Introduction',
-        collapsable: true,
+        collapsable: false,
         children: [
-          [ '/intro/designConcept.md', 'Design Concept' ],
+          [ '/intro/design-concept.md', 'Design Concept' ],
           [ '/intro/install.md', 'Install' ],
-          [ '/intro/quickStart.md', 'Quick Start' ]
+          [ '/intro/quick-start.md', 'Quick Start' ]
+        ]
+      }, {
+        title: 'Usage',
+        collapsable: false,
+        children: [
+          [ '/usage/slot.md', 'Control Slot' ],
+          [ '/usage/linkage.md', 'Linkage' ],
+          [ '/usage/validate.md', 'Validate' ],
+          [ '/usage/status.md', 'Status' ]
+        ]
+      }, {
+        title: 'Controls',
+        collapsable: false,
+        children: [
+          [ '/controls/element-ui.md', 'Element UI' ],
         ]
       }
     ]

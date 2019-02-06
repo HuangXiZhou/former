@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 actionText: Start →
-actionLink: /intro/designConcept.md
+actionLink: /intro/design-concept.md
 features:
 - title: Zero learning cost
   details: All configurations are configured with major UI component libraries with almost no learning costs.
