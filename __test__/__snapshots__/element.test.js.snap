@@ -161,7 +161,7 @@ exports[`Former/form Render \`Select\` component 1`] = `
               <!---->
             </div>
             <div class="el-select-dropdown el-popper" style="display: none;">
-              <div class="el-scrollbar" style="display: none;">
+              <div class="el-scrollbar" style="">
                 <div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
                   <ul class="el-scrollbar__view el-select-dropdown__list">
                     <!---->
@@ -176,9 +176,7 @@ exports[`Former/form Render \`Select\` component 1`] = `
                   <div class="el-scrollbar__thumb" style="height: 0px; transform: translateY(0%); -webkit-transform: translateY(0%);"></div>
                 </div>
               </div>
-              <p class="el-select-dropdown__empty">
-                无数据
-              </p>
+              <!---->
             </div>
           </div>
         </div>
@@ -308,8 +306,7 @@ exports[`Former/form Render \`Upload\` component 1`] = `
       <div class="wrapper">
         <div class="main">
           <div class="control">
-            <div tabindex="0" class="el-upload el-upload--text"><input type="file" name="upload" class="el-upload__input"></div>
-            <ul class="el-upload-list el-upload-list--text"></ul>
+            <div tabindex="0" class="el-upload el-upload--text"><input type="file" name="upload" class="el-upload__input"></div><span tag="ul" name="el-list" class="el-upload-list el-upload-list--text"></span>
           </div>
         </div>
       </div>
