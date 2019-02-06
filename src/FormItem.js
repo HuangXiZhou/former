@@ -69,10 +69,10 @@ export default {
       when: fields.hasOwnProperty('when') ? fields.when : true
     };
     const surrounds = {
-      top: fields.top || null,
-      prefix: fields.prefix || null,
-      suffix: fields.suffix || null,
-      bottom: fields.bottom || null
+      top: fields.top,
+      prefix: fields.prefix,
+      suffix: fields.suffix,
+      bottom: fields.bottom
     };
 
     // `DISABLE` status
