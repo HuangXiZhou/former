@@ -65,7 +65,7 @@ export default {
   ],
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
-    "https://cdn.jsdelivr.net/npm/@xizhouh/former/lib/former.umd.js"
+    "https://unpkg.com/@xizhouh/former@1.0.3/lib/former.umd.js"
   ]
 }
 ```
@@ -143,7 +143,7 @@ export default {
   ],
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
-    "https://cdn.jsdelivr.net/npm/@xizhouh/former/lib/former.umd.js"
+    "https://unpkg.com/@xizhouh/former@1.0.3/lib/former.umd.js"
   ]
 }
 ```

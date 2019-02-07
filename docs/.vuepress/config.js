@@ -10,7 +10,7 @@ module.exports = {
     [ 'link', { rel: 'icon', href: '/logo.png' } ],
     [ 'script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' } ],
     [ 'script', { src: 'https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js' } ],
-    [ 'script', { src: 'https://cdn.jsdelivr.net/npm/@xizhouh/former/lib/vue/index.js' } ]
+    [ 'script', { src: 'https://unpkg.com/@xizhouh/former@1.0.3/lib/former.umd.js' } ]
   ],
   themeConfig: {
     search: false,
