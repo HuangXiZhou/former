@@ -3,7 +3,7 @@ title: Design concept
 lang: en-US
 ---
 
-## Former
+# Design Concept
 
 Before using **Former**, we can look at how traditional forms are written in html:
 

@@ -33,8 +33,10 @@ module.exports = {
         children: [
           [ '/usage/slot.md', 'Control Slot' ],
           [ '/usage/linkage.md', 'Linkage' ],
+          [ '/usage/conditional-render.md', 'Conditional Render' ],
           [ '/usage/validate.md', 'Validate' ],
-          [ '/usage/status.md', 'Status' ]
+          [ '/usage/status.md', 'Status' ],
+          [ '/usage/custom.md', 'Custom' ]
         ]
       }, {
         title: 'Controls',

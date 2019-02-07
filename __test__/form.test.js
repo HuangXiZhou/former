@@ -98,10 +98,10 @@ describe('Former/form', () => {
   });
 
   it('Render surrounds', () => {
-    const top = formerInstance.findAll('.wrapper .top').wrappers.map((v) => v.text())[0];
-    const prefix = formerInstance.findAll('.wrapper .prefix').wrappers.map((v) => v.text())[0];
-    const suffix = formerInstance.findAll('.wrapper .suffix').wrappers.map((v) => v.text())[0];
-    const bottom = formerInstance.findAll('.wrapper .bottom').wrappers.map((v) => v.text())[0];
+    const top = formerInstance.findAll('.former-top').wrappers.map((v) => v.text())[0];
+    const prefix = formerInstance.findAll('.former-wrapper .former-prefix').wrappers.map((v) => v.text())[0];
+    const suffix = formerInstance.findAll('.former-wrapper .former-suffix').wrappers.map((v) => v.text())[0];
+    const bottom = formerInstance.findAll('.former-bottom').wrappers.map((v) => v.text())[0];
     expect(top).toBe('top');
     expect(prefix).toBe('prefix');
     expect(suffix).toBe('suffix');
@@ -109,37 +109,45 @@ describe('Former/form', () => {
   });
 
   it('Render surrounds by functions', () => {
-    const top = formerInstance.findAll('.wrapper .top div').wrappers.map((v) => v.text())[0];
-    const prefix = formerInstance.findAll('.wrapper .prefix div').wrappers.map((v) => v.text())[0];
-    const suffix = formerInstance.findAll('.wrapper .suffix div').wrappers.map((v) => v.text())[0];
-    const bottom = formerInstance.findAll('.wrapper .bottom div').wrappers.map((v) => v.text())[0];
+    const top = formerInstance.findAll('.former-top div').wrappers.map((v) => v.text())[0];
+    const prefix = formerInstance.findAll('.former-wrapper .former-prefix div').wrappers.map((v) => v.text())[0];
+    const suffix = formerInstance.findAll('.former-wrapper .former-suffix div').wrappers.map((v) => v.text())[0];
+    const bottom = formerInstance.findAll('.former-bottom div').wrappers.map((v) => v.text())[0];
     expect(top).toBe('top');
     expect(prefix).toBe('prefix');
     expect(suffix).toBe('suffix');
     expect(bottom).toBe('bottom');
   });
 
+  it('Linkage', () => {
+    const linkageFoo = formerInstance.find('.likage_foo input[type="text"]');
+    linkageFoo.setValue('foo');
+    localVue.nextTick(() => {
+      expect(formerInstance.vm.model.linkage_bar).toBe('foo');
+    });
+  });
+
   it('When render', () => {
-    const inputArr = formerInstance.findAll('.wrapper input[aria-label="input"]').wrappers.map((v) => v.text());
-    const textareaArr = formerInstance.findAll('.wrapper input[aria-label="textarea"]').wrappers.map((v) => v.text());
-    const noneArr = formerInstance.findAll('.wrapper input[aria-label="none"]').wrappers.map((v) => v.text());
+    const inputArr = formerInstance.findAll('.former-wrapper input[aria-label="input"]').wrappers.map((v) => v.text());
+    const textareaArr = formerInstance.findAll('.former-wrapper input[aria-label="textarea"]').wrappers.map((v) => v.text());
+    const noneArr = formerInstance.findAll('.former-wrapper input[aria-label="none"]').wrappers.map((v) => v.text());
     expect(inputArr).toHaveLength(1);
     expect(textareaArr).toHaveLength(1);
     expect(noneArr).toHaveLength(0);
   });
 
   it('Custom class mount', () => {
-    const arr = formerInstance.findAll('.wrapper .custom-class').wrappers;
+    const arr = formerInstance.findAll('.former-wrapper .custom-class').wrappers;
     expect(arr).toHaveLength(1);
   });
 
   it('Custom style mount', () => {
-    const htmlArr = formerInstance.findAll('.wrapper .custom-class').wrappers.map((v) => v.html());
+    const htmlArr = formerInstance.findAll('.former-wrapper .custom-class').wrappers.map((v) => v.html());
     htmlArr.forEach((v) => expect(v).toContain('style="width: 350px;"'));
   });
 
   it('Form model reactive', () => {
-    formerInstance.find('.wrapper input[aria-label="input"]').setValue('foo');
+    formerInstance.find('.former-wrapper input[aria-label="input"]').setValue('foo');
     expect(formerInstance.vm.model.input).toBe('foo');
   });
 });

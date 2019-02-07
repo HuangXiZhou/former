@@ -1,33 +1,37 @@
-.wrapper {
+.former-wrapper {
   display: flex;
 }
 
-.main {
+.former-main {
   width: 100%;
 }
 
-.top {
+.former-top {
   padding-bottom: 5px;
 }
 
-.bottom {
+.former-bottom {
   padding-top: 5px;
 }
 
-.top,
-.bottom {
+.former-top,
+.former-bottom {
   color: #909399;
-  line-height: normal;
 }
 
-.control {
+.former-control {
   width: 100%;
 }
 
-.suffix {
+.former-suffix,
+.former-prefix {
+  color: #909399;
+}
+
+.former-suffix {
   margin-left: 10px;
 }
 
-.prefix {
+.former-prefix {
   margin-right: 10px;
 }

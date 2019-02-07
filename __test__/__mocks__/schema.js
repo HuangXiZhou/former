@@ -1,5 +1,20 @@
 export default [
   {
+    label: 'linkage_foo',
+    name: 'linkage_foo',
+    type: 'input',
+    class: [ 'likage_foo' ],
+    onChange: (e, model) => {
+      model.linkage_bar = e;
+    }
+  },
+  {
+    label: 'linkage_bar',
+    name: 'linkage_bar',
+    type: 'input',
+    class: [ 'likage_bar' ]
+  },
+  {
     label: 'none',
     name: 'none',
     type: 'input',
@@ -130,7 +145,8 @@ export default [
     label: 'upload',
     name: 'upload',
     type: 'upload',
-    action: 'https://foo.bar'
+    action: 'https://foo.bar',
+    slots: [ (h) => h('p', 'foo') ]
   },
   {
     label: 'custom',
