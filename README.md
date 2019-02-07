@@ -11,6 +11,7 @@
 
 [![Build Status][build-badge]][build]
 [![codecov][codecov-badge]][codecov]
+[![Codacy Badge][code-quality-badge]][code-quality]
 [![version][version-badge]][package]
 [![size][size-badge]][package]
 [![downloads][downloads-badge]][package]
@@ -41,7 +42,7 @@ Vue.use(Element);
 Vue.component('Former', Former);
 ```
 
-For more information like adapting other UI librarys, please refer to [Quick Start][DocumentQuickStart] in our documentation.
+For more information like adapting other UI librarys, please refer to [Quick Start][document-quick-start] in our documentation.
 
 ## Browser Support
 
@@ -57,10 +58,12 @@ WTFPL
 [build]: https://travis-ci.org/HuangXiZhou/former
 [codecov-badge]: https://img.shields.io/codecov/c/gh/HuangXiZhou/former.svg?style=flat-square
 [codecov]: https://codecov.io/gh/HuangXiZhou/former
+[code-quality-badge]: https://img.shields.io/codacy/grade/4653fb27e45e46de94e94364d53cdeef.svg?style=flat-square
+[code-quality]: https://www.codacy.com/app/HuangXiZhou/former
 [version-badge]: https://img.shields.io/npm/v/@xizhouh/former.svg?style=flat-square
 [size-badge]: https://img.shields.io/bundlephobia/minzip/@xizhouh/former.svg?style=flat-square
 [package]: https://www.npmjs.com/package/@xizhouh/former
 [downloads-badge]: https://img.shields.io/npm/dm/@xizhouh/former.svg?style=flat-square
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: https://github.com/HuangXiZhou/former/pulls
-[DocumentQuickStart]: https://huangxizhou.github.io/former/intro/quickStart.html
+[document-quick-start]: https://huangxizhou.github.io/former/intro/quickStart.html
