@@ -18,6 +18,8 @@
 
 ## Feature
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/391ca5a952364a32b0bf3ce08b097d09)](https://app.codacy.com/app/HuangXiZhou/former?utm_source=github.com&utm_medium=referral&utm_content=HuangXiZhou/former&utm_campaign=Badge_Grade_Dashboard)
+
 Former provides an adapter for the mainstream UI library `form` components and the ability from `JSON schema` to `Vue` view.
 
 ## Install
