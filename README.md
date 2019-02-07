@@ -1,7 +1,10 @@
 <div align="center">
-<h1>Former</h1>
 
-<p>👻 Amazing form adapter, write less, do much.</p>
+  <div style="text-align:center;">
+    <img height="140" width="350" src="./docs/.vuepress/public/logo.png" alt="Former">
+  </div>
+
+  <p>👻 Amazing form adapter, write less, do much.</p>
 </div>
 
 <hr />
@@ -12,6 +15,10 @@
 [![size][size-badge]][package]
 [![downloads][downloads-badge]][package]
 [![PRs Welcome][prs-badge]][prs]
+
+## Feature
+
+Former provides an adapter for the mainstream UI library `form` components and the ability from `JSON schema` to `Vue` view.
 
 ## Install
 
