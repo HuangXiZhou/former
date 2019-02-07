@@ -1,4 +1,7 @@
 export default {
+  linkage_foo: '',
+  linkage_bar: '',
+  none: '',
   input: '',
   textarea: '',
   select: 'bar',

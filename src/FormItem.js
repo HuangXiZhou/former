@@ -47,6 +47,7 @@ export default {
           'prefix',
           'suffix',
           'bottom',
+          'onChange',
           'when',
           'htmlAttr'
         ]),
@@ -65,6 +66,8 @@ export default {
       status: this.$data.status || 'EDIT',
       // Form control type
       type: fields.type || 'input',
+      // onChange event
+      onChange: fields.onChange || null,
       // Form control linkage
       when: fields.hasOwnProperty('when') ? fields.when : true
     };
@@ -83,6 +86,8 @@ export default {
     // Emit event
     attrs.on.input = (e) => {
       this.$emit('input', e);
+      // Linkage
+      attrs.onChange && attrs.onChange(e, this.model);
     };
 
     // Init UI component value
@@ -92,28 +97,28 @@ export default {
       set(this.model, attrs.props.name, e);
     });
 
-    // Linkage
-    const isWhen = checkWhen(attrs.when);
+    // Conditional render
+    const isWhen = checkWhen(attrs.when, cloneDeep(this.model));
     if (attrs.hasOwnProperty('when') && !isWhen) {
       return null;
     };
 
     return h(`${transformUIelName(ui)}-form-item`, { props: attrs.props }, [
+      // Top slot
+      surrounds.top && h('div', { class: [ `${config.namespace}-top` ] }, [ isFunction(surrounds.top) ? surrounds.top(h) : surrounds.top ]),
       // Main slot
-      h('div', { class: [ 'wrapper' ] }, [
+      h('div', { class: [ `${config.namespace}-wrapper` ] }, [
         // Prefix slot
-        surrounds.prefix && h('div', { class: [ 'prefix' ] }, [ isFunction(surrounds.prefix) ? surrounds.prefix(h) : surrounds.prefix ]),
-        h('div', { class: [ 'main' ] }, [
-          // Top slot
-          surrounds.top && h('div', { class: [ 'top' ] }, [ isFunction(surrounds.top) ? surrounds.top(h) : surrounds.top ]),
+        surrounds.prefix && h('div', { class: [ `${config.namespace}-prefix` ] }, [ isFunction(surrounds.prefix) ? surrounds.prefix(h) : surrounds.prefix ]),
+        h('div', { class: [ `${config.namespace}-main` ] }, [
           //  Main control
-          createFormControl[ui](h, attrs),
-          // Bottom slot
-          surrounds.bottom && h('div', { class: [ 'bottom' ] }, [ isFunction(surrounds.bottom) ? surrounds.bottom(h) : surrounds.bottom ])
+          createFormControl[ui](h, attrs)
         ]),
         // Suffix slot
-        surrounds.suffix && h('div', { class: [ 'suffix' ] }, [ isFunction(surrounds.suffix) ? surrounds.suffix(h) : surrounds.suffix ])
-      ])
+        surrounds.suffix && h('div', { class: [ `${config.namespace}-suffix` ] }, [ isFunction(surrounds.suffix) ? surrounds.suffix(h) : surrounds.suffix ])
+      ]),
+      // Bottom slot
+      surrounds.bottom && h('div', { class: [ `${config.namespace}-bottom` ] }, [ isFunction(surrounds.bottom) ? surrounds.bottom(h) : surrounds.bottom ])
     ]);
   }
 };

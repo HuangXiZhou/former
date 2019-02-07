@@ -51,13 +51,14 @@ export function parsePath (obj, path) {
 /**
  * Check when
  *
- * @param {Any} input
+ * @param {Any} input input
+ * @param {Object} props props
  */
-export function checkWhen (input) {
+export function checkWhen (input, props) {
   if (typeof input === 'boolean') return input;
 
   if (typeof input === 'function') {
-    return input();
+    return input(props);
   }
 }
 

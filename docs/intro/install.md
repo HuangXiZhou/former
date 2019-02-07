@@ -1,4 +1,4 @@
-## Install
+# Install
 
 This module is distributed via [npm][npm] which is bundled with [node][node] and
 should be installed as one of your project's `dependencies`:
