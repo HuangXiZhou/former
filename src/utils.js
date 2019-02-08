@@ -65,11 +65,25 @@ export function checkWhen (input, props) {
 /**
  * Transform UI library name to vue components name
  *
- * @param {String} libraryName UI library name
+ * @param {String} libName UI library name
+ * @param {String} tag UI component tag 
  */
-export function transformUIelName (libraryName) {
-  if (libraryName === 'element-ui') {
-    return 'el';
+export function transformUIelName (libName, tag) {
+  if (libName === 'element-ui') {
+    if (tag === 'FORM') {
+      return 'el-form';
+    }
+    if (tag === 'FORM_ITEM') {
+      return 'el-form-item';
+    }
   }
-  return 'former-custom-';
+  if (libName === 'iview') {
+    if (tag === 'FORM') {
+      return 'i-form';
+    }
+    if (tag === 'FORM_ITEM') {
+      return 'form-item';
+    }
+  }
+  return 'div';
 }

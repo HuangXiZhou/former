@@ -1,5 +1,5 @@
 import { createLocalVue, mount, config } from '@vue/test-utils';
-import ElementUI from 'element-ui';
+import iView from 'iview';
 import Former from '../src/index';
 import formerConfig from '../src/config';
 import schema from './__mocks__/schema';
@@ -7,7 +7,7 @@ import model from './__mocks__/model';
 
 config.stubs.transition = false;
 const localVue = createLocalVue();
-localVue.use(ElementUI);
+localVue.use(iView);
 
 describe('Former/form', () => {
   let formerInstance;
@@ -16,9 +16,9 @@ describe('Former/form', () => {
     formerInstance = mount({
       data: () => ({
         options: {},
-        schema,
-        model,
-        ui: 'element-ui'
+        schema: schema['iview'],
+        model: model['iview'],
+        ui: 'iview'
       }),
 
       components: { Former },
@@ -92,11 +92,6 @@ describe('Former/form', () => {
     expect(formerRef.resetFields).toBeDefined();
   });
 
-  it('Clear form validate', () => {
-    const formerRef = formerInstance.vm.$refs.former;
-    expect(formerRef.clearValidate).toBeDefined();
-  });
-
   it('Render surrounds', () => {
     const top = formerInstance.findAll('.former-top').wrappers.map((v) => v.text())[0];
     const prefix = formerInstance.findAll('.former-wrapper .former-prefix').wrappers.map((v) => v.text())[0];
@@ -128,9 +123,9 @@ describe('Former/form', () => {
   });
 
   it('When render', () => {
-    const inputArr = formerInstance.findAll('.former-wrapper input[aria-label="input"]').wrappers.map((v) => v.text());
-    const textareaArr = formerInstance.findAll('.former-wrapper input[aria-label="textarea"]').wrappers.map((v) => v.text());
-    const noneArr = formerInstance.findAll('.former-wrapper input[aria-label="none"]').wrappers.map((v) => v.text());
+    const inputArr = formerInstance.findAll('.former-wrapper input[name="input"]').wrappers.map((v) => v.text());
+    const textareaArr = formerInstance.findAll('.former-wrapper textarea[name="textarea"]').wrappers.map((v) => v.text());
+    const noneArr = formerInstance.findAll('.former-wrapper input[name="none"]').wrappers.map((v) => v.text());
     expect(inputArr).toHaveLength(1);
     expect(textareaArr).toHaveLength(1);
     expect(noneArr).toHaveLength(0);
@@ -147,7 +142,7 @@ describe('Former/form', () => {
   });
 
   it('Form model reactive', () => {
-    formerInstance.find('.former-wrapper input[aria-label="input"]').setValue('foo');
+    formerInstance.find('.former-wrapper input[name="input"]').setValue('foo');
     expect(formerInstance.vm.model.input).toBe('foo');
   });
 });

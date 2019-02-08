@@ -27,7 +27,10 @@ describe('Utils', () => {
   });
 
   it('TransformUIelName', () => {
-    expect(utils.transformUIelName('element-ui')).toBe('el');
-    expect(utils.transformUIelName()).toBe('former-custom-');
+    expect(utils.transformUIelName('element-ui', 'FORM')).toBe('el-form');
+    expect(utils.transformUIelName('element-ui', 'FORM_ITEM')).toBe('el-form-item');
+    expect(utils.transformUIelName('iview', 'FORM')).toBe('i-form');
+    expect(utils.transformUIelName('iview', 'FORM_ITEM')).toBe('form-item');
+    expect(utils.transformUIelName()).toBe('div');
   });
 });

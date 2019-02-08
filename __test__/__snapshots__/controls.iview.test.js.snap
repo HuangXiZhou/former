@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Former/form Render \`Cascader\` component 1`] = `
+<form autocomplete="off" class="ivu-form ivu-form-label-right">
+  <div class="ivu-form-item"><label class="ivu-form-item-label">cascader</label>
+    <div class="ivu-form-item-content">
+      <div class="former-wrapper">
+        <div class="former-main">
+          <div class="ivu-cascader ivu-cascader-show-clear ivu-cascader-size-default control">
+            <div class="ivu-cascader-rel"><input type="hidden" name="cascader" value="foo,bar">
+              <div class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type">
+                <!---->
+                <!----> <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i> <input autocomplete="off" spellcheck="false" type="text" placeholder="请选择" readonly="readonly" class="ivu-input ivu-input-default">
+                <!---->
+              </div>
+              <div class="ivu-cascader-label" style="display: none;"></div> <i class="ivu-icon ivu-icon-ios-close-circle ivu-cascader-arrow"></i> <i class="ivu-icon ivu-icon-ios-arrow-down ivu-cascader-arrow"></i>
+            </div>
+            <div class="ivu-select-dropdown" style="display: none;">
+              <div><span><ul class="ivu-cascader-menu"><li class="ivu-cascader-menu-item ivu-cascader-menu-item-active">
+    foo
+    <i class="ivu-icon ivu-icon-ios-arrow-forward"></i> <!----></li></ul><span><ul class="ivu-cascader-menu"><li class="ivu-cascader-menu-item">
+    bar
+    <!----> <!----></li></ul><!----></span></span>
+                <div class="ivu-cascader-dropdown" style="display: none;">
+                  <ul class="ivu-select-dropdown-list">
+                    <li class="ivu-select-item"><span></span>f<span></span>o<span></span>o<span></span> <span></span>/<span></span> <span></span>b<span></span>a<span></span>r<span></span></li>
+                  </ul>
+                </div>
+                <ul class="ivu-cascader-not-found-tip" style="display: none;">
+                  <li>无匹配数据</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Checkbox\` component 1`] = `
+<form autocomplete="off" class="ivu-form ivu-form-label-right">
+  <div class="ivu-form-item"><label class="ivu-form-item-label">checkbox</label>
+    <div class="ivu-form-item-content">
+      <div class="former-wrapper">
+        <div class="former-main">
+          <div class="ivu-checkbox-group ivu-checkbox-default control"><label class="ivu-checkbox-wrapper ivu-checkbox-group-item ivu-checkbox-wrapper-checked ivu-checkbox-default"><span class="ivu-checkbox ivu-checkbox-checked"><span class="ivu-checkbox-inner"></span> <input type="checkbox" class="ivu-checkbox-input" value="foo"></span> foo</label></div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Custom\` component 1`] = `<form autocomplete="off" class="ivu-form ivu-form-label-right"></form>`;
+
+exports[`Former/form Render \`Input\` component 1`] = `
+<form autocomplete="off" class="ivu-form ivu-form-label-right">
+  <div class="ivu-form-item ivu-form-item-required"><label class="ivu-form-item-label">input</label>
+    <div class="ivu-form-item-content">
+      <div class="former-top">top</div>
+      <div class="former-wrapper">
+        <div class="former-prefix">prefix</div>
+        <div class="former-main">
+          <div class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type control">
+            <!---->
+            <!----> <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i> <input autocomplete="off" spellcheck="false" type="text" placeholder="input placeholder" name="input" class="ivu-input ivu-input-default">
+            <!---->
+          </div>
+        </div>
+        <div class="former-suffix">suffix</div>
+      </div>
+      <div class="former-bottom">bottom</div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`InputNumber\` component 1`] = `
+<form autocomplete="off" class="ivu-form ivu-form-label-right">
+  <div class="ivu-form-item"><label class="ivu-form-item-label">inputNumber</label>
+    <div class="ivu-form-item-content">
+      <div class="former-wrapper">
+        <div class="former-main">
+          <div class="ivu-input-number ivu-input-number-default control">
+            <div class="ivu-input-number-handler-wrap"><a class="ivu-input-number-handler ivu-input-number-handler-up"><span class="ivu-input-number-handler-up-inner ivu-icon ivu-icon-ios-arrow-up"></span></a> <a class="ivu-input-number-handler ivu-input-number-handler-down"><span class="ivu-input-number-handler-down-inner ivu-icon ivu-icon-ios-arrow-down"></span></a></div>
+            <div class="ivu-input-number-input-wrap"><input autocomplete="off" spellcheck="false" name="inputNumber" placeholder="" class="ivu-input-number-input"></div>
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Radio\` component 1`] = `
+<form autocomplete="off" class="ivu-form ivu-form-label-right">
+  <div class="ivu-form-item"><label class="ivu-form-item-label">radio</label>
+    <div class="ivu-form-item-content">
+      <div class="former-wrapper">
+        <div class="former-main">
+          <div name="radio" class="ivu-radio-group ivu-radio-group-default ivu-radio-default control"><label class="ivu-radio-wrapper ivu-radio-group-item ivu-radio-wrapper-checked ivu-radio-default"><span class="ivu-radio ivu-radio-checked"><span class="ivu-radio-inner"></span> <input type="radio" class="ivu-radio-input" name="radio"></span>foo</label><label class="ivu-radio-wrapper ivu-radio-group-item ivu-radio-default"><span class="ivu-radio"><span class="ivu-radio-inner"></span> <input type="radio" class="ivu-radio-input" name="radio"></span>bar</label></div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Rate\` component 1`] = `
+<form autocomplete="off" class="ivu-form ivu-form-label-right">
+  <div class="ivu-form-item"><label class="ivu-form-item-label">rate</label>
+    <div class="ivu-form-item-content">
+      <div class="former-wrapper">
+        <div class="former-main">
+          <div class="ivu-rate control" style="line-height: 2.4;"><input type="hidden" name="rate">
+            <div class="ivu-rate-star ivu-rate-star-zero"><span type="half" class="ivu-rate-star-content"></span></div>
+            <div class="ivu-rate-star ivu-rate-star-zero"><span type="half" class="ivu-rate-star-content"></span></div>
+            <div class="ivu-rate-star ivu-rate-star-zero"><span type="half" class="ivu-rate-star-content"></span></div>
+            <div class="ivu-rate-star ivu-rate-star-zero"><span type="half" class="ivu-rate-star-content"></span></div>
+            <div class="ivu-rate-star ivu-rate-star-zero"><span type="half" class="ivu-rate-star-content"></span></div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Select\` component 1`] = `
+<form autocomplete="off" class="ivu-form ivu-form-label-right">
+  <div class="ivu-form-item"><label class="ivu-form-item-label">select</label>
+    <div class="ivu-form-item-content">
+      <div class="former-wrapper">
+        <div class="former-main">
+          <div class="ivu-select ivu-select-single ivu-select-default control custom-class" style="width: 350px;">
+            <div tabindex="0" class="ivu-select-selection"><input type="hidden" name="select" value="bar">
+              <div> <span class="ivu-select-selected-value">bar</span>
+                <!---->
+                <!----> <i class="ivu-icon ivu-icon-ios-arrow-down ivu-select-arrow"></i></div>
+            </div>
+            <div class="ivu-select-dropdown" style="display: none; min-width: 350px;">
+              <ul class="ivu-select-not-found" style="display: none;">
+                <li>无匹配数据</li>
+              </ul>
+              <ul class="ivu-select-dropdown-list">
+                <li class="ivu-select-item">foo</li>
+                <li class="ivu-select-item ivu-select-item-selected">bar</li>
+              </ul>
+              <ul class="ivu-select-loading" style="display: none;">加载中</ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Switch\` component 1`] = `
+<form autocomplete="off" class="ivu-form ivu-form-label-right">
+  <div class="ivu-form-item"><label class="ivu-form-item-label">switch</label>
+    <div class="ivu-form-item-content">
+      <div class="former-wrapper">
+        <div class="former-main"><span tabindex="0" class="ivu-switch ivu-switch-default control"><input type="hidden" name="switch" value="false"> <span class="ivu-switch-inner"><!----> </span></span></div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Textarea\` component 1`] = `
+<form autocomplete="off" class="ivu-form ivu-form-label-right">
+  <div class="ivu-form-item"><label class="ivu-form-item-label">textarea</label>
+    <div class="ivu-form-item-content">
+      <div class="former-top">
+        <div>top</div>
+      </div>
+      <div class="former-wrapper">
+        <div class="former-prefix">
+          <div>prefix</div>
+        </div>
+        <div class="former-main">
+          <div class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type control"><textarea wrap="soft" autocomplete="off" spellcheck="false" placeholder="textarea placeholder" rows="2" name="textarea" class="ivu-input"></textarea></div>
+        </div>
+        <div class="former-suffix">
+          <div>suffix</div>
+        </div>
+      </div>
+      <div class="former-bottom">
+        <div>bottom</div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Tree\` component 1`] = `
+<form autocomplete="off" class="ivu-form ivu-form-label-right">
+  <div class="ivu-form-item"><label class="ivu-form-item-label">tree</label>
+    <div class="ivu-form-item-content">
+      <div class="former-wrapper">
+        <div class="former-main">
+          <div class="ivu-tree control">
+            <ul class="ivu-tree-children" visible="visible">
+              <li><span class="ivu-tree-arrow"><i class="ivu-icon ivu-icon-ios-arrow-forward"></i> <!----></span>
+                <!----> <span class="ivu-tree-title">foo</span>
+                <!---->
+              </li>
+            </ul>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Former/form Render \`Upload\` component 1`] = `
+<form autocomplete="off" class="ivu-form ivu-form-label-right">
+  <div class="ivu-form-item"><label class="ivu-form-item-label">upload</label>
+    <div class="ivu-form-item-content">
+      <div class="former-wrapper">
+        <div class="former-main">
+          <div class="ivu-upload control">
+            <div class="ivu-upload ivu-upload-select"><input type="file" class="ivu-upload-input">
+              <div>
+                <p>foo</p>
+              </div>
+            </div>
+            <ul class="ivu-upload-list"></ul>
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</form>
+`;

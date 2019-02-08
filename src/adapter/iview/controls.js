@@ -20,7 +20,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       return formatPreviewValue(h, props.value);
     }
-    return h('el-input', { ...attrs });
+    return h('i-input', { ...attrs });
   }
 
   // Textarea
@@ -28,7 +28,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       return formatPreviewValue(h, props.value);
     }
-    return h('el-input', { ...attrs });
+    return h('i-input', { ...attrs, props: { ...attrs.props, type } });
   }
 
   // Select
@@ -40,7 +40,7 @@ export function createFormControl (h, attrs) {
         .pop();
       return formatPreviewValue(h, value.label);
     }
-    return h('el-select', { ...attrs }, props.options && props.options.map((option) => {
+    return h('i-select', { ...attrs }, props.options && props.options.map((option) => {
       const _attrs = {
         on: { ...(option.on || {}) },
         props: {
@@ -49,7 +49,7 @@ export function createFormControl (h, attrs) {
           ...omit(option, [ 'id', 'value', 'name', 'label', 'on' ])
         }
       };
-      return h('el-option', { ..._attrs }, option.name || option.label || '');
+      return h('i-option', { ..._attrs }, option.name || option.label || '');
     }));
   }
 
@@ -58,7 +58,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       return h('p', props.value);
     }
-    return h('el-input-number', { ...attrs });
+    return h('input-number', { ...attrs });
   }
 
   // Radio
@@ -66,7 +66,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       return h('p', props.value);
     }
-    return h('el-radio-group', { ...attrs }, props.options && props.options.map((option) => {
+    return h('radio-group', { ...attrs }, props.options && props.options.map((option) => {
       const _attrs = {
         on: { ...(option.on || {}) },
         props: {
@@ -74,7 +74,7 @@ export function createFormControl (h, attrs) {
           ...omit(option, [ 'id', 'value', 'name', 'label' ])
         }
       };
-      return h('el-radio', { ..._attrs }, option.name || option.label || '');
+      return h('radio', { ..._attrs }, option.name || option.label || '');
     }));
   }
 
@@ -83,7 +83,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       return h('p', props.value);
     }
-    return h('el-checkbox-group', { ...attrs }, props.options && props.options.map((option) => {
+    return h('checkbox-group', { ...attrs }, props.options && props.options.map((option) => {
       const _attrs = {
         on: { ...(option.on || {}) },
         props: {
@@ -92,7 +92,7 @@ export function createFormControl (h, attrs) {
           ...omit(option, [ 'id', 'value', 'name', 'label' ])
         }
       };
-      return h('el-checkbox', { ..._attrs }, option.name || option.label || '');
+      return h('checkbox', { ..._attrs }, option.name || option.label || '');
     }));
   }
 
@@ -101,7 +101,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       return h('p', props.value);
     }
-    return h('el-switch', { ...attrs });
+    return h('i-switch', { ...attrs });
   }
 
   // Slider
@@ -109,7 +109,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       attrs.props.disabled = true;
     }
-    return h('el-slider', { ...attrs });
+    return h('slider', { ...attrs });
   }
 
   // DatePicker
@@ -117,15 +117,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       attrs.props.disabled = true;
     }
-    return h('el-date-picker', { ...attrs });
-  }
-
-  // TimeSelect
-  if (type === 'timeSelect') {
-    if (status === 'PREVIEW') {
-      attrs.props.disabled = true;
-    }
-    return h('el-time-select', { ...attrs });
+    return h('date-picker', { ...attrs });
   }
 
   // TimePicker
@@ -133,7 +125,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       attrs.props.disabled = true;
     }
-    return h('el-time-picker', { ...attrs });
+    return h('time-picker', { ...attrs });
   }
 
   // Tree
@@ -141,7 +133,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       attrs.props.disabled = true;
     }
-    return h('el-tree', { ...attrs });
+    return h('tree', { ...attrs });
   }
 
   // Rate
@@ -149,7 +141,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       attrs.props.disabled = true;
     }
-    return h('el-rate', { ...attrs, style: { lineHeight: 2.4 } }); // fix position
+    return h('rate', { ...attrs, style: { lineHeight: 2.4 } }); // fix position
   }
 
   // Cascader
@@ -159,7 +151,7 @@ export function createFormControl (h, attrs) {
       const value = deepSearchCascader(attrs.props.value, attrs.props.options).reverse().join('/');
       return formatPreviewValue(h, value);
     }
-    return h('el-cascader', { ...attrs });
+    return h('cascader', { ...attrs });
   }
 
   // Upload
@@ -167,7 +159,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       attrs.props.disabled = true;
     }
-    return h('el-upload', { ...attrs }, props.slots && Object.keys(props.slots).map(
+    return h('upload', { ...attrs }, props.slots && Object.keys(props.slots).map(
       (slot) => h('div', [ props.slots[slot](h) ])
     ));
   }
@@ -176,16 +168,6 @@ export function createFormControl (h, attrs) {
   if (type === 'custom') {
     return h('div', { ...attrs }, [ props.render(h) ]);
   }
-}
-
-/**
- * Format preview
- *
- * @param {Function} h createElement function alias
- * @param {String} value element value
- */
-function formatPreviewValue (h, value) {
-  return h('p', value);
 }
 
 /**
