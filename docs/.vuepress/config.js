@@ -1,10 +1,6 @@
-const path = require('path');
-const resolve = (val) => path.resolve(__dirname, val);
-
 module.exports = {
   base: '/former/',
   title: 'Former',
-  lastUpdated: 'Last Updated',
   description: '👻 Amazing form adapter, write less, do much.',
   head: [
     [ 'link', { rel: 'icon', href: '/logo.png' } ],
@@ -15,6 +11,7 @@ module.exports = {
   themeConfig: {
     search: false,
     sidebarDepth: 0,
+    lastUpdated: 'Last Updated',
     nav: [
       { text: 'Github', link: 'https://github.com/HuangXiZhou/former' }
     ],
@@ -25,7 +22,8 @@ module.exports = {
         children: [
           [ '/intro/design-concept.md', 'Design Concept' ],
           [ '/intro/install.md', 'Install' ],
-          [ '/intro/quick-start.md', 'Quick Start' ]
+          [ '/intro/quick-start.md', 'Quick Start' ],
+          [ '/intro/changelog.md', 'Change Log' ]
         ]
       }, {
         title: 'Usage',
@@ -48,13 +46,6 @@ module.exports = {
     ]
   },
   plugins: [
-    'vuepress-plugin-demo-block'
-  ],
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '@': resolve('.')
-      }
-    }
-  }
+    require('./plugins/vuepress-plugin-demo-block/index.js')
+  ]
 }

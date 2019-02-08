@@ -26,6 +26,10 @@ build:
 	@npm run clean
 	@npm run build
 
+.PHONY: changelog
+changelog:
+	@npm run changelog
+
 .PHONY: docs-dev
 docs-dev:
 	@npm run docs:dev
@@ -42,5 +46,6 @@ help:
 	@echo "   \033[35mmake test\033[0m\t\033[0m\t---  Code test"
 	@echo "   \033[35mmake cov\033[0m\t\033[0m\t---  Code cov"
 	@echo "   \033[35mmake build\033[0m\t\033[0m\t---  Build code"
+	@echo "   \033[35mmake changelog\033[0m\033[0m\t---  Generate changelog"
 	@echo "   \033[35mmake docs-dev\033[0m\033[0m\t---  Write docs"
 	@echo "   \033[35mmake docs-build\033[0m\033[0m\t---  Build docs"
