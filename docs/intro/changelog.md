@@ -1,5 +1,5 @@
-<a name="1.0.3"></a>
-## [1.0.3](https://github.com/HuangXiZhou/former/compare/v0.0.4...v1.0.3) (2019-02-07)
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/HuangXiZhou/former/compare/v0.0.4...v1.0.4) (2019-02-08)
 
 
 ### Bug Fixes
@@ -8,6 +8,11 @@
 * **test:** fix test import route ([ab21ae6](https://github.com/HuangXiZhou/former/commit/ab21ae6))
 * **travis:** fix Travis ci config bug ([e41c51e](https://github.com/HuangXiZhou/former/commit/e41c51e))
 * fix doc js link useless ([6678eec](https://github.com/HuangXiZhou/former/commit/6678eec))
+
+
+### Features
+
+* **iview:** add iview adapter ([9dc612b](https://github.com/HuangXiZhou/former/commit/9dc612b))
 
 
 
