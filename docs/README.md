@@ -11,7 +11,3 @@ features:
 - title: Take full control
   details: As long as you want, you can take full control of your subcomponent behavior.
 ---
-
-::: warning
-Former is till under development.
-:::

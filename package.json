@@ -15,13 +15,14 @@
     "test": "jest . --cache --silent",
     "cov": "jest . --cache --coverage --silent",
     "codecov": "npm run cov && cat ./coverage/lcov.info | codecov",
+    "changelog": "conventional-changelog -p angular -i ./docs/intro/changelog.md -s -r 0",
     "ci": "npm run test",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run test",
+      "pre-commit": "npm run lint && npm run test && npm run changelog",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -51,6 +52,7 @@
     "babel-jest": "^24.0.0",
     "cac": "^6.4.0",
     "codecov.io": "^0.1.6",
+    "conventional-changelog-cli": "^2.0.11",
     "cz-conventional-changelog": "^2.1.0",
     "element-ui": "^2.4.11",
     "eslint": "^5.12.1",
