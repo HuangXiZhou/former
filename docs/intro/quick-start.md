@@ -25,7 +25,15 @@ Vue.component('Former', Former);
 ```html
 <template>
   <div>
-    <Former ui="element-ui" :model="model" :schema="schema" :options="options"></Former>
+    <el-select v-model="uiLib">
+      <el-option
+        v-for="item in uiLibs"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
+    <Former :ui="uiLib" :model="model" :schema="schema" :options="options"></Former>
     <p>{{model}}</p>
   </div>
 </template>
@@ -37,6 +45,11 @@ export default {
   },
 
   data: () => ({
+    uiLib: 'element-ui',
+    uiLibs: [
+      { value: 'element-ui', label: 'Element UI' },
+      { value: 'iview', label: 'iView' }
+    ],
     model: { name: '', sex: '' },
     schema: [
       { label: 'name:', name: 'name', type: 'input', style: { maxWidth: '350px', width: '100%' },
@@ -58,7 +71,7 @@ export default {
   ],
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
-    "https://unpkg.com/@xizhouh/former@1.0.3/lib/former.umd.js"
+    "https://unpkg.com/@xizhouh/former@1.0.4/lib/former.umd.js"
   ]
 }
 ```

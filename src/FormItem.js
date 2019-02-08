@@ -103,7 +103,7 @@ export default {
       return null;
     };
 
-    return h(`${transformUIelName(ui)}-form-item`, { props: attrs.props }, [
+    return h(transformUIelName(ui, 'FORM_ITEM'), { props: attrs.props }, [
       // Top slot
       surrounds.top && h('div', { class: [ `${config.namespace}-top` ] }, [ isFunction(surrounds.top) ? surrounds.top(h) : surrounds.top ]),
       // Main slot

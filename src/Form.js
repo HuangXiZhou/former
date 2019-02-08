@@ -75,11 +75,10 @@ export default {
 
   render (h) {
     const { schema, model, options, ui } = this.$props;
-    const prefix = transformUIelName(ui);
 
     // Render form element
     return h(
-      `${prefix}-form`,
+      transformUIelName(ui, 'FORM'),
       { ref: config.namespace, props: { ...options, model } },
       schema.map((item, idx) => h(FormItem, { key: idx, props: { fields: item, ui } }))
     );

@@ -36,7 +36,7 @@ export default {
     buttonStyle: {
       margin: '5px 3px'
     },
-    model: { name: '', sex: 0, faceValue: 0 },
+    model: { name: '', sex: 0, faceValue: 0, cascader: [] },
     schema: [
       {
         label: 'Name: ',
@@ -55,6 +55,18 @@ export default {
         name: 'faceValue',
         type: 'rate',
         showTooltip: true
+      }, {
+        label: 'cascader',
+        name: 'cascader',
+        type: 'cascader',
+        options: [ {
+          value: 'foo',
+          label: 'foo',
+          children: [ {
+            value: 'bar',
+            label: 'bar'
+          } ]
+        } ]
       }
     ],
     options: { labelWidth: '100px', labelPosition: 'left' }
@@ -77,7 +89,7 @@ export default {
   ],
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
-    "https://unpkg.com/@xizhouh/former@1.0.3/lib/former.umd.js"
+    "https://unpkg.com/@xizhouh/former@1.0.4/lib/former.umd.js"
   ]
 }
 ```
