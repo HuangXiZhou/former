@@ -217,12 +217,7 @@ exports[`Former/form Render \`Textarea\` component 1`] = `
           <div>prefix</div>
         </div>
         <div class="former-main">
-          <div class="el-input control">
-            <!----><input type="text" autocomplete="off" aria-label="textarea" placeholder="textarea placeholder" class="el-input__inner">
-            <!---->
-            <!---->
-            <!---->
-          </div>
+          <div class="el-textarea control"><textarea autocomplete="off" aria-label="textarea" placeholder="textarea placeholder" class="el-textarea__inner" style="min-height: -4px;"></textarea></div>
         </div>
         <div class="former-suffix">
           <div>suffix</div>

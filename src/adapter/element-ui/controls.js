@@ -20,7 +20,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       return formatPreviewValue(h, props.value);
     }
-    return h('el-input', { ...attrs });
+    return h('el-input', { ...attrs, props: { ...attrs.props, type: 'text' } });
   }
 
   // Textarea
@@ -28,7 +28,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       return formatPreviewValue(h, props.value);
     }
-    return h('el-input', { ...attrs });
+    return h('el-input', { ...attrs, props: { ...attrs.props, type: 'textarea' } });
   }
 
   // Select

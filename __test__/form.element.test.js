@@ -129,7 +129,7 @@ describe('Former/form', () => {
 
   it('When render', () => {
     const inputArr = formerInstance.findAll('.former-wrapper input[aria-label="input"]').wrappers.map((v) => v.text());
-    const textareaArr = formerInstance.findAll('.former-wrapper input[aria-label="textarea"]').wrappers.map((v) => v.text());
+    const textareaArr = formerInstance.findAll('.former-wrapper textarea[aria-label="textarea"]').wrappers.map((v) => v.text());
     const noneArr = formerInstance.findAll('.former-wrapper input[aria-label="none"]').wrappers.map((v) => v.text());
     expect(inputArr).toHaveLength(1);
     expect(textareaArr).toHaveLength(1);
