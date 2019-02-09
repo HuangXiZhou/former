@@ -5,7 +5,17 @@ If `type = 'custom'`, the contents of the form are output via the `render` field
 ::: demo
 ```html
 <template>
-  <Former ui="element-ui" :model="model" :schema="schema" :options="options"></Former>
+  <div>
+    <el-select :style="selectStyle" v-model="uiLib">
+      <el-option
+        v-for="item in uiLibs"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
+    <Former :ui="uiLib" :model="model" :schema="schema" :options="options"></Former>
+  </div>
 </template>
 
 <script>
@@ -15,6 +25,14 @@ export default {
   },
 
   data: () => ({
+    selectStyle: {
+      marginBottom: '20px'
+    },
+    uiLib: 'element-ui',
+    uiLibs: [
+      { value: 'element-ui', label: 'Element UI' },
+      { value: 'iview', label: 'iView' }
+    ],
     model: { custom: '' },
     schema: [
       {
@@ -45,7 +63,7 @@ export default {
   ],
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
-    "https://unpkg.com/@xizhouh/former@1.0.5/lib/former.umd.js"
+    "https://unpkg.com/@xizhouh/former@1.0.6/lib/former.umd.js"
   ]
 }
 ```
