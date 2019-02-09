@@ -148,7 +148,7 @@ export function createFormControl (h, attrs) {
   if (type === 'cascader') {
     if (status === 'PREVIEW') {
       attrs.props.disabled = true;
-      const value = deepSearchCascader(attrs.props.value, attrs.props.options).reverse().join('/');
+      const value = deepSearchCascader(attrs.props.value, attrs.props.data).reverse().join('/');
       return formatPreviewValue(h, value);
     }
     return h('cascader', { ...attrs });
@@ -168,6 +168,16 @@ export function createFormControl (h, attrs) {
   if (type === 'custom') {
     return h('div', { ...attrs }, [ props.render(h) ]);
   }
+}
+
+/**
+ * Format preview
+ *
+ * @param {Function} h createElement function alias
+ * @param {String} value element value
+ */
+function formatPreviewValue (h, value) {
+  return h('p', value);
 }
 
 /**

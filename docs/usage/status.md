@@ -6,7 +6,15 @@ In the form, the transition between states is frequent. Through state control, t
 ```html
 <template>
   <div>
-    <Former ref="form" ui="element-ui" :model="model" :schema="schema" :options="options"></Former>
+    <el-select :style="selectStyle" v-model="uiLib">
+      <el-option
+        v-for="item in uiLibs"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value">
+      </el-option>
+    </el-select>
+    <Former ref="form" :ui="uiLib" :model="model" :schema="schema" :options="options"></Former>
     <h4>Global status</h4>
     <el-button :style="buttonStyle" @click="setGlobalStatus('EDIT')">Edit</el-button>
     <el-button :style="buttonStyle" @click="setGlobalStatus('PREVIEW')">Preview</el-button>
@@ -33,6 +41,14 @@ export default {
   },
 
   data: () => ({
+    selectStyle: {
+      marginBottom: '20px'
+    },
+    uiLib: 'element-ui',
+    uiLibs: [
+      { value: 'element-ui', label: 'Element UI' },
+      { value: 'iview', label: 'iView' }
+    ],
     buttonStyle: {
       margin: '5px 3px'
     },
@@ -59,7 +75,7 @@ export default {
         label: 'cascader',
         name: 'cascader',
         type: 'cascader',
-        options: [ {
+        data: [ {
           value: 'foo',
           label: 'foo',
           children: [ {
@@ -85,10 +101,12 @@ export default {
 ```json
 {
   "cssLib": [
-    "https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    "https://unpkg.com/element-ui/lib/theme-chalk/index.css",
+    "https://unpkg.com/iview@3.2.2/dist/styles/iview.css"
   ],
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
+    "https://unpkg.com/iview@3.2.2/dist/iview.min.js",
     "https://unpkg.com/@xizhouh/former@1.0.4/lib/former.umd.js"
   ]
 }
