@@ -1,33 +1,19 @@
 <a name="1.0.6"></a>
-## [1.0.6](https://github.com/HuangXiZhou/former/compare/v1.0.5...v1.0.6) (2019-02-09)
+## [1.0.6](https://github.com/HuangXiZhou/former/compare/v0.0.4...v1.0.6) (2019-02-09)
 
 
 ### Bug Fixes
 
-* **iview:** fix radio & checkbox status ([619db57](https://github.com/HuangXiZhou/former/commit/619db57))
-
-
-
-<a name="1.0.5"></a>
-## [1.0.5](https://github.com/HuangXiZhou/former/compare/v1.0.4...v1.0.5) (2019-02-09)
-
-
-
-<a name="1.0.4"></a>
-## [1.0.4](https://github.com/HuangXiZhou/former/compare/v0.0.4...v1.0.4) (2019-02-08)
-
-
-### Bug Fixes
-
+* fix doc js link useless ([6678eec](https://github.com/HuangXiZhou/former/commit/6678eec))
+* **iview:** fix radio & checkbox status ([11215f5](https://github.com/HuangXiZhou/former/commit/11215f5))
 * **rollup:** fix rollup postcss config ([2b0a42e](https://github.com/HuangXiZhou/former/commit/2b0a42e))
 * **test:** fix test import route ([ab21ae6](https://github.com/HuangXiZhou/former/commit/ab21ae6))
 * **travis:** fix Travis ci config bug ([e41c51e](https://github.com/HuangXiZhou/former/commit/e41c51e))
-* fix doc js link useless ([6678eec](https://github.com/HuangXiZhou/former/commit/6678eec))
 
 
 ### Features
 
-* **iview:** add iview adapter ([9dc612b](https://github.com/HuangXiZhou/former/commit/9dc612b))
+* **iview:** add iview adapter ([1e3895c](https://github.com/HuangXiZhou/former/commit/1e3895c))
 
 
 
