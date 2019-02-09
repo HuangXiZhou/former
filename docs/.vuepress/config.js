@@ -6,7 +6,7 @@ module.exports = {
     [ 'link', { rel: 'icon', href: '/logo.png' } ],
     [ 'script', { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js' } ],
     [ 'script', { src: 'https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js' } ],
-    [ 'script', { src: 'https://unpkg.com/@xizhouh/former@1.0.4/lib/former.umd.js' } ]
+    [ 'script', { src: 'https://unpkg.com/@xizhouh/former@1.0.5/lib/former.umd.js' } ]
   ],
   themeConfig: {
     search: false,
