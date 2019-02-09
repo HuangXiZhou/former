@@ -1,6 +1,6 @@
 {
   "name": "@xizhouh/former",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Amazing form adapter, write less, do much.",
   "main": "lib/former.umd.js",
   "files": [
