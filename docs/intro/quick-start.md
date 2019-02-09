@@ -25,7 +25,7 @@ Vue.component('Former', Former);
 ```html
 <template>
   <div>
-    <el-select v-model="uiLib">
+    <el-select :style="selectStyle" v-model="uiLib">
       <el-option
         v-for="item in uiLibs"
         :key="item.value"
@@ -45,19 +45,22 @@ export default {
   },
 
   data: () => ({
+    selectStyle: {
+      marginBottom: '20px'
+    },
     uiLib: 'element-ui',
     uiLibs: [
       { value: 'element-ui', label: 'Element UI' },
       { value: 'iview', label: 'iView' }
     ],
-    model: { name: '', sex: '' },
+    model: { Name: '', Sex: '' },
     schema: [
-      { label: 'name:', name: 'name', type: 'input', style: { maxWidth: '350px', width: '100%' },
+      { label: 'Name: ', name: 'name', type: 'input', style: { maxWidth: '350px', width: '100%' },
         rules: [
           { required: true, message: 'name is required', trigger: 'blur' }
         ]
       },
-      { label: 'sex:', name: 'sex', type: 'input', style: { maxWidth: '350px', width: '100%' } }
+      { label: 'Sex: ', name: 'sex', type: 'input', style: { maxWidth: '350px', width: '100%' } }
     ],
     options: { labelWidth: '80px', labelPosition: 'left' }
   })
@@ -67,10 +70,12 @@ export default {
 ```json
 {
   "cssLib": [
-    "https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    "https://unpkg.com/element-ui/lib/theme-chalk/index.css",
+    "https://unpkg.com/iview@3.2.2/dist/styles/iview.css"
   ],
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
+    "https://unpkg.com/iview@3.2.2/dist/iview.min.js",
     "https://unpkg.com/@xizhouh/former@1.0.4/lib/former.umd.js"
   ]
 }
