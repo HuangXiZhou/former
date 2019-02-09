@@ -52,7 +52,9 @@ export default {
           'htmlAttr'
         ]),
         // Form validate
-        prop: fields.name || ''
+        prop: fields.name || '',
+        // Control status
+        disabled: false
       } || {},
       // Event handlers are nested under `on`
       on: fields.on || {},
