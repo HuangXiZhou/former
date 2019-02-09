@@ -154,7 +154,7 @@ export default {
   ],
   "jsLib": [
     "https://unpkg.com/iview@3.2.2/dist/iview.min.js",
-    "https://unpkg.com/@xizhouh/former@1.0.7/lib/former.umd.js"
+    "https://unpkg.com/@xizhouh/former@1.0.9/lib/former.umd.js"
   ]
 }
 ```
