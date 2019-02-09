@@ -1,6 +1,6 @@
 {
   "name": "@xizhouh/former",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Amazing form adapter, write less, do much.",
   "main": "lib/former.umd.js",
   "files": [
@@ -15,7 +15,6 @@
     "test": "jest . --cache --silent",
     "cov": "jest . --cache --coverage --silent",
     "codecov": "npm run cov && cat ./coverage/lcov.info | codecov",
-    "changelog": "conventional-changelog -p angular -i ./docs/intro/changelog.md -s",
     "ci": "npm run test",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
