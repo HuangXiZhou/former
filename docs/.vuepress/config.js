@@ -22,8 +22,7 @@ module.exports = {
         children: [
           [ '/intro/design-concept.md', 'Design Concept' ],
           [ '/intro/install.md', 'Install' ],
-          [ '/intro/quick-start.md', 'Quick Start' ],
-          [ '/intro/changelog.md', 'Change Log' ]
+          [ '/intro/quick-start.md', 'Quick Start' ]
         ]
       }, {
         title: 'Usage',
