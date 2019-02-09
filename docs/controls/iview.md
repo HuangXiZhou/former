@@ -1,11 +1,9 @@
-# Element UI Control Demos
-
-<div class="2333">
+# iView Control Demos
 
 ::: demo
 ```html
 <template>
-  <Former ui="element-ui" :model="model" :schema="schema" :options="options"></Former>
+  <Former ui="iview" :model="model" :schema="schema" :options="options"></Former>
 </template>
 
 <script>
@@ -19,13 +17,12 @@ export default {
       input: '',
       textarea: '',
       select: 'foo',
-      inputNumber: '',
+      inputNumber: 0,
       radio: 'foo',
-      checkbox: false,
+      checkbox: [ 'foo' ],
       switch: false,
       slider: 0,
       datePicker: '',
-      timeSelect: '',
       timePicker: '',
       tree: '',
       rate: null,
@@ -74,7 +71,7 @@ export default {
         name: 'checkbox',
         type: 'checkbox',
         options: [
-          { value: true, name: 'foo' }
+          { value: 'foo', name: 'foo' }
         ]
       },
       {
@@ -93,11 +90,6 @@ export default {
         type: 'datePicker'
       },
       {
-        label: 'TimeSelect: ',
-        name: 'timeSelect',
-        type: 'timeSelect'
-      },
-      {
         label: 'TimePicker: ',
         name: 'timePicker',
         type: 'timePicker'
@@ -106,17 +98,21 @@ export default {
         label: 'Tree: ',
         name: 'tree',
         type: 'tree',
-        data: [ {
-          label: 'foo',
-          children: [ {
-            label: 'bar',
-            children: [ { label: 'foo' } ]
-          } ]
-        } ],
-        defaultProps: {
-          children: 'children',
-          label: 'label'
-        }
+        data: [
+          {
+            title: 'foo',
+            children: [
+              {
+                title: 'bar',
+                children: [
+                  {
+                    title: 'foo'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         label: 'Rate: ',
@@ -127,7 +123,7 @@ export default {
         label: 'Cascader: ',
         name: 'cascader',
         type: 'cascader',
-        options: [ {
+        data: [ {
           value: 'foo',
           label: 'foo',
           children: [ {
@@ -142,11 +138,11 @@ export default {
         type: 'upload',
         action: 'https://foo.bar',
         slots: [
-          (h) => h('el-button', { props: { type: 'primary' } }, 'Click to upload')
+          (h) => h('i-button', { props: { type: 'primary' } }, 'Click to upload')
         ]
       }
     ],
-    options: { labelWidth: '100px', labelPosition: 'left' }
+    options: { labelWidth: 100, labelPosition: 'left' }
   })
 }
 </script>
@@ -154,10 +150,10 @@ export default {
 ```json
 {
   "cssLib": [
-    "https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    "https://unpkg.com/iview@3.2.2/dist/styles/iview.css"
   ],
   "jsLib": [
-    "https://unpkg.com/element-ui/lib/index.js",
+    "https://unpkg.com/iview@3.2.2/dist/iview.min.js",
     "https://unpkg.com/@xizhouh/former@1.0.6/lib/former.umd.js"
   ]
 }

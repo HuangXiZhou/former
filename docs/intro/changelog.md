@@ -1,3 +1,13 @@
+<a name="1.0.6"></a>
+## [1.0.6](https://github.com/HuangXiZhou/former/compare/v1.0.5...v1.0.6) (2019-02-09)
+
+
+### Bug Fixes
+
+* **iview:** fix radio & checkbox status ([619db57](https://github.com/HuangXiZhou/former/commit/619db57))
+
+
+
 <a name="1.0.5"></a>
 ## [1.0.5](https://github.com/HuangXiZhou/former/compare/v1.0.4...v1.0.5) (2019-02-09)
 

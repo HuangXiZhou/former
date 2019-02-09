@@ -52,7 +52,7 @@ export default {
     buttonStyle: {
       margin: '5px 3px'
     },
-    model: { name: '', sex: 0, faceValue: 0, cascader: [] },
+    model: { name: '', sex: 'Female', faceValue: 0, cascader: [] },
     schema: [
       {
         label: 'Name: ',
@@ -63,26 +63,14 @@ export default {
         name: 'sex',
         type: 'radio',
         options: [
-          { value: 0, name: 'female' },
-          { value: 1, name:'male' }
+          { value: 'Female', name: 'Female' },
+          { value: 'Male', name:'Male' }
         ]
       }, {
         label: 'Face value: ',
         name: 'faceValue',
         type: 'rate',
         showTooltip: true
-      }, {
-        label: 'cascader',
-        name: 'cascader',
-        type: 'cascader',
-        data: [ {
-          value: 'foo',
-          label: 'foo',
-          children: [ {
-            value: 'bar',
-            label: 'bar'
-          } ]
-        } ]
       }
     ],
     options: { labelWidth: '100px', labelPosition: 'left' }
@@ -107,7 +95,7 @@ export default {
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
     "https://unpkg.com/iview@3.2.2/dist/iview.min.js",
-    "https://unpkg.com/@xizhouh/former@1.0.5/lib/former.umd.js"
+    "https://unpkg.com/@xizhouh/former@1.0.6/lib/former.umd.js"
   ]
 }
 ```
