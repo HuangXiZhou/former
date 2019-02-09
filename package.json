@@ -15,7 +15,7 @@
     "test": "jest . --cache --silent",
     "cov": "jest . --cache --coverage --silent",
     "codecov": "npm run cov && cat ./coverage/lcov.info | codecov",
-    "changelog": "conventional-changelog -p angular -i ./docs/intro/changelog.md -s -r 0",
+    "changelog": "conventional-changelog -p angular -i ./docs/intro/changelog.md -s",
     "ci": "npm run test",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
