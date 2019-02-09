@@ -71,7 +71,8 @@ export function createFormControl (h, attrs) {
         on: { ...(option.on || {}) },
         props: {
           label: option.id || option.value,
-          ...omit(option, [ 'id', 'value', 'name', 'label' ])
+          ...omit(option, [ 'id', 'value', 'name', 'label' ]),
+          disabled: attrs.props.disabled || false
         }
       };
       return h('radio', { ..._attrs }, option.name || option.label || '');
@@ -89,7 +90,8 @@ export function createFormControl (h, attrs) {
         props: {
           value: option.id || option.value,
           label: option.name || option.label || '',
-          ...omit(option, [ 'id', 'value', 'name', 'label' ])
+          ...omit(option, [ 'id', 'value', 'name', 'label' ]),
+          disabled: attrs.props.disabled || false
         }
       };
       return h('checkbox', { ..._attrs }, option.name || option.label || '');
