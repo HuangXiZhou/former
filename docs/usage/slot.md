@@ -1,6 +1,6 @@
 # Slot
 
-Many times, we need to be more detailed to customize our form controls. At this time, the slot becomes very useful. We can look at the common slot distribution: 
+Many times, we need to be more detailed to customize our form controls. At this time, the slot becomes very useful. We can look at the common slot distribution:
 
 <div style="text-align:center;">
   <img height="140" width="350" :src="$withBase('/slot.png')" alt="slot">
@@ -77,7 +77,7 @@ export default {
 
   methods: {
     renderSlot(slotName, value) {
-      this.schema[0][slotName] = this.schema[0][slotName] 
+      this.schema[0][slotName] = this.schema[0][slotName]
         ? ''
         : value;
     }
@@ -94,7 +94,7 @@ export default {
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
     "https://unpkg.com/iview@3.2.2/dist/iview.min.js",
-    "https://unpkg.com/@xizhouh/former@1.0.9/lib/former.umd.js"
+    "https://unpkg.com/@xizhouh/former@1.1.0/lib/former.umd.js"
   ]
 }
 ```

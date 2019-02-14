@@ -63,10 +63,10 @@ export default {
         name: 'age',
         type: 'inputNumber',
         rules: [
-          { 
+          {
             validator (rule, value, callback, source, options) {
-              value < 18 ? callback(['Age must be greater than 18 years old']) : callback([]);     
-            } 
+              value < 18 ? callback(['Age must be greater than 18 years old']) : callback([]);
+            }
           }
         ]
       }
@@ -85,7 +85,7 @@ export default {
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
     "https://unpkg.com/iview@3.2.2/dist/iview.min.js",
-    "https://unpkg.com/@xizhouh/former@1.0.9/lib/former.umd.js"
+    "https://unpkg.com/@xizhouh/former@1.1.0/lib/former.umd.js"
   ]
 }
 ```
@@ -141,7 +141,7 @@ export default {
         type: 'input',
         rules: [
           { required: true, trigger: 'blur' },
-          { min: 3, max: 5, message: 'First Name must be between 3 and 5 characters', trigger: 'blur' } 
+          { min: 3, max: 5, message: 'First Name must be between 3 and 5 characters', trigger: 'blur' }
         ]
       }, {
         label: 'Last name: ',
@@ -198,7 +198,7 @@ function getParameterByName(name, url) {
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
     "https://unpkg.com/iview@3.2.2/dist/iview.min.js",
-    "https://unpkg.com/@xizhouh/former@1.0.9/lib/former.umd.js"
+    "https://unpkg.com/@xizhouh/former@1.1.0/lib/former.umd.js"
   ]
 }
 ```
