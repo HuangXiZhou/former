@@ -49,7 +49,8 @@ export default {
           'bottom',
           'onChange',
           'when',
-          'htmlAttr'
+          'htmlAttr',
+          'merge'
         ]),
         // Form validate
         prop: fields.name || '',
@@ -70,6 +71,8 @@ export default {
       type: fields.type || 'input',
       // onChange event
       onChange: fields.onChange || null,
+      // Same field merge
+      merge: fields.merge || {},
       // Form control linkage
       when: fields.hasOwnProperty('when') ? fields.when : true
     };

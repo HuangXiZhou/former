@@ -52,7 +52,7 @@ export default {
     buttonStyle: {
       margin: '5px 3px'
     },
-    model: { name: '', sex: 'Female', faceValue: 0, cascader: [] },
+    model: { name: '', sex: 'Female', faceValue: 0 },
     schema: [
       {
         label: 'Name: ',
