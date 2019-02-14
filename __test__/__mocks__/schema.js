@@ -5,6 +5,7 @@ export default {
       name: 'linkage_foo',
       type: 'input',
       class: [ 'likage_foo' ],
+      merge: { type: 'text' },
       onChange: (e, model) => {
         model.linkage_bar = e;
       }
@@ -13,12 +14,14 @@ export default {
       label: 'linkage_bar',
       name: 'linkage_bar',
       type: 'input',
-      class: [ 'likage_bar' ]
+      class: [ 'likage_bar' ],
+      merge: { type: 'text' },
     },
     {
       label: 'none',
       name: 'none',
       type: 'input',
+      merge: { type: 'text' },
       when: false
     },
     {
@@ -34,6 +37,7 @@ export default {
       [
         { required: true, trigger: 'blur' }
       ],
+      merge: { type: 'text' },
       when: true
     },
     {
@@ -45,6 +49,7 @@ export default {
       suffix: (h) => h('div', 'suffix'),
       bottom: (h) => h('div', 'bottom'),
       htmlAttr: { placeholder: 'textarea placeholder' },
+      merge: { type: 'textarea' },
       when: () => true
     },
     {
@@ -162,6 +167,7 @@ export default {
       name: 'linkage_foo',
       type: 'input',
       class: [ 'likage_foo' ],
+      merge: { type: 'text' },
       onChange: (e, model) => {
         model.linkage_bar = e;
       }
@@ -170,12 +176,14 @@ export default {
       label: 'linkage_bar',
       name: 'linkage_bar',
       type: 'input',
+      merge: { type: 'text' },
       class: [ 'likage_bar' ]
     },
     {
       label: 'none',
       name: 'none',
       type: 'input',
+      merge: { type: 'text' },
       when: false
     },
     {
@@ -187,6 +195,7 @@ export default {
       suffix: 'suffix',
       bottom: 'bottom',
       htmlAttr: { placeholder: 'input placeholder' },
+      merge: { type: 'text' },
       rules:
       [
         { required: true, trigger: 'blur' }
@@ -202,6 +211,7 @@ export default {
       suffix: (h) => h('div', 'suffix'),
       bottom: (h) => h('div', 'bottom'),
       htmlAttr: { placeholder: 'textarea placeholder' },
+      merge: { type: 'textarea' },
       when: () => true
     }, {
       label: 'select',

@@ -9,18 +9,21 @@ import { cloneDeep } from '../../utils.js';
  * @param {String} type control's type
  */
 export function createFormControl (h, attrs) {
-  const { props, status, type, htmlAttr } = attrs;
+  const { props, status, type, htmlAttr, merge } = attrs;
   attrs.class = [ 'control' ].concat(attrs.class);
   attrs.attrs = htmlAttr;
   // Remove type & htmlAttr field
   attrs = omit(attrs, [ 'type', 'htmlAttr' ]);
+
+  // Merge props
+  attrs.props = { ...attrs.props, ...merge };
 
   // Input
   if (type === 'input') {
     if (status === 'PREVIEW') {
       return formatPreviewValue(h, props.value);
     }
-    return h('el-input', { ...attrs, props: { ...attrs.props, type: 'text' } });
+    return h('el-input', { ...attrs });
   }
 
   // Textarea
@@ -28,7 +31,7 @@ export function createFormControl (h, attrs) {
     if (status === 'PREVIEW') {
       return formatPreviewValue(h, props.value);
     }
-    return h('el-input', { ...attrs, props: { ...attrs.props, type: 'textarea' } });
+    return h('el-input', { ...attrs });
   }
 
   // Select

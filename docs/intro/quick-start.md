@@ -7,19 +7,25 @@ The following demo codes are available for running in [JSFiddle][JSFiddle] and [
 So far, the UI libraries we support are as follows:
 
 - [Element UI][ElementUI]
-
-## Element UI
+- [iView][iView]
 
 ```js
 // main.js
 import Vue from 'vue';
-import ElementUI from 'element-ui';
 import Former from '@xizhouh/former';
+import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
 Vue.use(ElementUI);
+
+// or use iView
+// import iView from 'iview';
+// import 'iview/dist/styles/iview.css';
+// Vue.use(iView);
+
 Vue.component('Former', Former);
 ```
+
+If you are familiar with the use of these ui libraries, then you will be kind to the Former. Former also provides field `merge` to override the same field in UI libraries and `JSON schema` like `type`.
 
 ::: demo
 ```html
@@ -85,3 +91,4 @@ export default {
 [JSFiddle]: https://jsfiddle.net
 [Codepen]: https://codepen.io
 [ElementUI]: https://github.com/ElemeFE/element
+[iView]: https://github.com/iview/iview

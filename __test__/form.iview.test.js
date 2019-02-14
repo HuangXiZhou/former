@@ -145,4 +145,18 @@ describe('Former/form', () => {
     formerInstance.find('.former-wrapper input[name="input"]').setValue('foo');
     expect(formerInstance.vm.model.input).toBe('foo');
   });
+
+  it('Merge', () => {
+    const _schema = [ {
+      label: 'merge',
+      name: 'merge',
+      type: 'input',
+      merge: { type: 'textarea' }
+    } ];
+    formerInstance.setData({ schema: _schema });
+    localVue.nextTick(() => {
+      const textareaArr = formerInstance.findAll('.former-wrapper textarea[name="textarea"]').wrappers.map((v) => v.text());
+      expect(textareaArr).toHaveLength(1);
+    });
+  });
 });
