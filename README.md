@@ -33,12 +33,18 @@ $ npm install --save @xizhouh/formler
 ## Quick Start
 
 ```js
+// main.js
 import Vue from 'vue';
 import Former from '@xizhouh/former';
-import Element from 'element-ui';
+import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 
-Vue.use(Element);
+// or use iView
+// import iView from 'iview';
+// import 'iview/dist/styles/iview.css';
+// Vue.use(iView);
+
 Vue.component('Former', Former);
 ```
 

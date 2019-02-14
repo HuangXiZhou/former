@@ -39,15 +39,15 @@ export default {
         label: 'Custom: ',
         name: 'custom',
         type: 'custom',
-        render: (h) => h('p', 
-          { 
-            style: { 
+        render: (h) => h('p',
+          {
+            style: {
               color: 'red',
               margin: 0,
               padding: 0,
               lineHeight: '40px'
-            } 
-          }, 
+            }
+          },
           'Custom red text')
       }
     ],
@@ -63,7 +63,7 @@ export default {
   ],
   "jsLib": [
     "https://unpkg.com/element-ui/lib/index.js",
-    "https://unpkg.com/@xizhouh/former@1.0.9/lib/former.umd.js"
+    "https://unpkg.com/@xizhouh/former@1.1.0/lib/former.umd.js"
   ]
 }
 ```
