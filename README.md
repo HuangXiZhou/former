@@ -66,4 +66,4 @@ WTFPL
 [downloads-badge]: https://img.shields.io/npm/dm/@xizhouh/former.svg?style=flat-square
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: https://github.com/HuangXiZhou/former/pulls
-[document-quick-start]: https://huangxizhou.github.io/former/intro/quickStart.html
+[document-quick-start]: https://huangxizhou.github.io/former/intro/quick-start.html
