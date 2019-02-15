@@ -33,4 +33,18 @@ describe('Utils', () => {
     expect(utils.transformUIelName('iview', 'FORM_ITEM')).toBe('form-item');
     expect(utils.transformUIelName()).toBe('div');
   });
+
+  it('DeepSearchCascader', () => {
+    const expected = [ 'bar', 'foo' ];
+    const value = [ 'foo', 'bar' ];
+    const options = [ {
+      value: 'foo',
+      label: 'foo',
+      children: [ {
+        value: 'bar',
+        label: 'bar'
+      } ]
+    } ];
+    expect(utils.deepSearchCascader(value, options)).toEqual(expect.arrayContaining(expected));
+  });
 });

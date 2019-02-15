@@ -66,7 +66,7 @@ export function checkWhen (input, props) {
  * Transform UI library name to vue components name
  *
  * @param {String} libName UI library name
- * @param {String} tag UI component tag 
+ * @param {String} tag UI component tag
  */
 export function transformUIelName (libName, tag) {
   if (libName === 'element-ui') {
@@ -86,4 +86,33 @@ export function transformUIelName (libName, tag) {
     }
   }
   return 'div';
+}
+
+/**
+ * Format preview
+ *
+ * @param {Function} h createElement function alias
+ * @param {String} value element value
+ */
+export function formatPreviewValue (h, value) {
+  return h('p', value);
+}
+
+/**
+ * Deep search cascader value
+ *
+ * @param  {...any} args
+ */
+export function deepSearchCascader (...args) {
+  args[2] = args[2] || 0;
+  args[3] = args[3] || [];
+  args[1].forEach((option) => {
+    if (option.value === args[0][args[2]]) {
+      if (option.children) {
+        deepSearchCascader(args[0], option.children, args[2] + 1, args[3]);
+      }
+      return args[3].push(option.label);
+    };
+  });
+  return args[3];
 }
