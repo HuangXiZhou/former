@@ -1,5 +1,5 @@
 import omit from 'object.omit';
-import { cloneDeep } from '../../utils.js';
+import { cloneDeep, formatPreviewValue, deepSearchCascader } from '../../utils.js';
 
 /**
  * Create a form control
@@ -179,33 +179,4 @@ export function createFormControl (h, attrs) {
   if (type === 'custom') {
     return h('div', { ...attrs }, [ props.render(h) ]);
   }
-}
-
-/**
- * Format preview
- *
- * @param {Function} h createElement function alias
- * @param {String} value element value
- */
-function formatPreviewValue (h, value) {
-  return h('p', value);
-}
-
-/**
- * Deep search cascader value
- *
- * @param  {...any} args
- */
-function deepSearchCascader (...args) {
-  args[2] = args[2] || 0;
-  args[3] = args[3] || [];
-  args[1].forEach((option) => {
-    if (option.value === args[0][args[2]]) {
-      if (option.children) {
-        deepSearchCascader(args[0], option.children, args[2] + 1, args[3]);
-      }
-      return args[3].push(option.label);
-    };
-  });
-  return args[3];
 }
