@@ -11,23 +11,17 @@ export function assert (v, message) {
 /**
  * cloneDeep
  *
- * @param {Object} o target
+ * @param {Object} obj target
  */
-export function cloneDeep(o) {
-  let c = arguments[1] || {};
-
-  for (let i in o) {
-    if (typeof o[i] === 'object') {
-      c[i] = o[i] instanceof Array
-        ? []
-        : {};
-      cloneDeep(o[i], c[i]);
-    } else {
-      c[i] = o[i];
+export function cloneDeep(obj){
+  if (typeof obj !== 'object') return;
+  var newObj = obj instanceof Array ? [] : {};
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      newObj[key] = typeof obj[key] === 'object' ? cloneDeep(obj[key]) : obj[key];
     }
   }
-
-  return c;
+  return newObj;
 }
 
 /**
